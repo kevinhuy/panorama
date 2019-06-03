@@ -14,3 +14,4 @@
     devicegroup: "Test"
     operation: "add"
   with_items: "{{ services }}"
+  ignore_errors: true

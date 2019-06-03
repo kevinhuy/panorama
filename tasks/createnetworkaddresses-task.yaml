@@ -14,3 +14,4 @@
     devicegroup: "Test"
     operation: "add"
   with_items: "{{ networkadd }}"
+  ignore_errors: true
