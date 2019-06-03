@@ -1,0 +1,9 @@
+networkgroup:
+
+{% for entry in configxls.ansible_facts.spreadsheet_NetworkObjects %}
+{% if entry.Name is defined %}
+    - addressgroupname: "{{ entry.Name }}" 
+      addressgroupip: "[{{ entry.Objects }}]"
+
+{% endif %}
+{% endfor %}

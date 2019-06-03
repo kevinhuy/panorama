@@ -1,0 +1,52 @@
+---
+- name: Play to push configuration to panorama
+  hosts: localhost
+  gather_facts: False
+  connection: local
+  vars:
+    ip_address: "192.168.50.48"
+    username: "admin"
+    password: "admin"
+
+  roles:
+    - role: PaloAltoNetworks.paloaltonetworks
+
+  tasks:
+
+    - name: Import XLS and convert to yaml facts
+      xls_to_facts:
+        src: variables/configuration.xlsx
+      register: configxls
+
+    # - name: Print variables
+    #   debug:
+    #     msg: "{{ configxls }}"
+
+    - name: Create YAML variables file for network addresses from XLS
+      template:
+        src: templates/networkadd.j2
+        dest: variables/networkaddress-variable.yaml
+
+    - name: Create YAML variables file for network groups from XLS
+      template:
+        src: templates/networkgroup.j2
+        dest: variables/networkgroup-variable.yaml
+
+    - name: Create YAML variables file for services from XLS
+      template:
+        src: templates/services.j2
+        dest: variables/services-variables.yaml
+
+    - name: Create YAML variables file for service groups from XLS
+      template:
+        src: templates/servicegroups.j2
+        dest: variables/servicegroups-variables.yaml
+    
+    - name: Import task to create Network Addresses
+      include_tasks: tasks/createnetworkaddresses-task.yaml
+
+    # - name: Import task to create Network Groups
+    #   include_tasks: tasks/createnetworkgroup-task.yaml
+
+    # - name: Import Task to create Security Policy
+    #   include_tasks: tasks/createpolicy.yaml

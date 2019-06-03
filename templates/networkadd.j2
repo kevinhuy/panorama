@@ -1,0 +1,7 @@
+networkadd:
+
+{% for entry in configxls.ansible_facts.spreadsheet_NetworkAddresses %}
+    - addressgroupname: "{{ entry.Name }}" 
+      addressgroupip: "{{ entry.Ipaddress }}"
+
+{% endfor %}

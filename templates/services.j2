@@ -1,0 +1,8 @@
+services:
+
+{% for entry in configxls.ansible_facts.spreadsheet_Services %}
+    - name: {{ entry.Name }}
+      Protocol: {{ entry.Protocol }}
+      port: {{ entry.Port_Number }}
+
+{% endfor %}

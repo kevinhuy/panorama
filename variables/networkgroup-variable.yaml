@@ -1,0 +1,8 @@
+networkgroup:
+
+    - addressgroupname: "test_object1" 
+      addressgroupip: "['test1','test2','test3','test4','test5','test6','test7']"
+
+    - addressgroupname: "test_object2" 
+      addressgroupip: "['test8','test9','test10']"
+

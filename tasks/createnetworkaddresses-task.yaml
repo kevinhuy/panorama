@@ -1,0 +1,16 @@
+- name: Import's netowrk Object yaml file
+  include_vars:
+    file: variables/networkaddress-variable.yaml
+
+- name: Configure Network address
+  panos_object:
+    ip_address: "{{ ip_address }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
+    addressobject: "{{ item.addressgroupname }}"
+    address: "{{ item.addressgroupip }}"
+    address_type: "ip-netmask"
+    description: "test"
+    devicegroup: "Test"
+    operation: "add"
+  with_items: "{{ networkadd }}"

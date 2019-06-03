@@ -1,0 +1,5 @@
+servicesgroups:
+
+    - name: test_group
+      members: ['test_tcp','test_udp','test2_tcp']
+

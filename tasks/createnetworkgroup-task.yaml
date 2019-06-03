@@ -1,0 +1,21 @@
+- name: Create YAML file from XLS to create network address objects
+  template:
+    src: networkgroup.j2
+    dest: create-objects/createnetworkgroups/networkgroup.yaml
+
+- name: Include the networkgroup.yaml file
+  include_vars:
+    file: create-objects/createnetworkgroups/networkgroup.yaml
+
+
+- name : Create network Object Groups
+  panos_object:
+    ip_address: "{{ ip_address }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
+    addressgroup: "{{ item.addressgroupname }}"
+    static_value: "{{ item.addressgroupip }}"
+    description: " pushed through Ansibel"
+    devicegroup: "Test"
+    operation: "add"
+  with_items: "{{ networkgroup }}"

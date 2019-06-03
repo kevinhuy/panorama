@@ -1,0 +1,86 @@
+networkadd:
+
+    - addressgroupname: "test1" 
+      addressgroupip: "1.1.1.1"
+
+    - addressgroupname: "test2" 
+      addressgroupip: "1.1.1.2"
+
+    - addressgroupname: "test3" 
+      addressgroupip: "1.1.1.3"
+
+    - addressgroupname: "test4" 
+      addressgroupip: "1.1.1.4"
+
+    - addressgroupname: "test5" 
+      addressgroupip: "1.1.1.5"
+
+    - addressgroupname: "test6" 
+      addressgroupip: "1.1.1.6"
+
+    - addressgroupname: "test7" 
+      addressgroupip: "1.1.1.7"
+
+    - addressgroupname: "test8" 
+      addressgroupip: "1.1.1.8"
+
+    - addressgroupname: "test9" 
+      addressgroupip: "1.1.1.9"
+
+    - addressgroupname: "test10" 
+      addressgroupip: "1.1.1.10"
+
+    - addressgroupname: "test11" 
+      addressgroupip: "1.1.1.11"
+
+    - addressgroupname: "test12" 
+      addressgroupip: "1.1.1.12"
+
+    - addressgroupname: "test13" 
+      addressgroupip: "1.1.1.13"
+
+    - addressgroupname: "test14" 
+      addressgroupip: "1.1.1.14"
+
+    - addressgroupname: "test15" 
+      addressgroupip: "1.1.1.15"
+
+    - addressgroupname: "test16" 
+      addressgroupip: "1.1.1.16"
+
+    - addressgroupname: "test17" 
+      addressgroupip: "1.1.1.17"
+
+    - addressgroupname: "test18" 
+      addressgroupip: "10.10.10.0/24"
+
+    - addressgroupname: "test19" 
+      addressgroupip: "20.20.20.0/14"
+
+    - addressgroupname: "test20" 
+      addressgroupip: "10.10.10.0/25"
+
+    - addressgroupname: "test21" 
+      addressgroupip: "20.20.20.0/15"
+
+    - addressgroupname: "test22" 
+      addressgroupip: "10.10.10.0/26"
+
+    - addressgroupname: "test23" 
+      addressgroupip: "20.20.20.0/16"
+
+    - addressgroupname: "test24" 
+      addressgroupip: "10.10.10.0/27"
+
+    - addressgroupname: "test25" 
+      addressgroupip: "20.20.20.0/17"
+
+    - addressgroupname: "test26" 
+      addressgroupip: "10.10.10.0/28"
+
+    - addressgroupname: "test27" 
+      addressgroupip: "20.20.20.0/18"
+
+    - addressgroupname: "test28" 
+      addressgroupip: "10.10.10.0/29"
+

@@ -1,0 +1,7 @@
+servicesgroups:
+
+{% for entry in configxls.ansible_facts.spreadsheet_ServiceGroups %}
+    - name: {{ entry.Name }}
+      members: [{{ entry.Members }}]
+
+{% endfor %}
