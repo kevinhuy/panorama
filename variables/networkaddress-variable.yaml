@@ -84,3 +84,9 @@ networkadd:
     - addressgroupname: "test28" 
       addressgroupip: "10.10.10.0/29"
 
+    - addressgroupname: "test29" 
+      addressgroupip: "1.1.1.1-10.10.10.10"
+
+    - addressgroupname: "test30" 
+      addressgroupip: "20.20.20.20-30.30.30.30"
+

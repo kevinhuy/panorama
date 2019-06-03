@@ -12,3 +12,7 @@ services:
       protocol: tcp
       port: 1456
 
+    - name: test_range
+      protocol: tcp
+      port: 1000-2000
+

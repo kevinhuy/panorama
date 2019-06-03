@@ -2,7 +2,7 @@
   include_vars:
     file: variables/networkaddress-variable.yaml
 
-- name: Configure Network address
+- name: Configure Network address when it is not a range
   panos_object:
     ip_address: "{{ ip_address }}"
     username: "{{ username }}"
@@ -14,4 +14,20 @@
     devicegroup: "Test"
     operation: "add"
   with_items: "{{ networkadd }}"
+  when: item.addressgroupip.find('-') == -1
+  ignore_errors: true
+
+- name: Configure Network address when it is a range
+  panos_object:
+    ip_address: "{{ ip_address }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
+    addressobject: "{{ item.addressgroupname }}"
+    address: "{{ item.addressgroupip }}"
+    address_type: "ip-range"
+    description: "test"
+    devicegroup: "Test"
+    operation: "add"
+  with_items: "{{ networkadd }}"
+  when: item.addressgroupip.find('-') != -1
   ignore_errors: true
