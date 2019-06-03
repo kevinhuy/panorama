@@ -4,7 +4,7 @@
   gather_facts: False
   connection: local
   vars:
-    ip_address: "192.168.50.48"
+    ip_address: "192.168.50.218"
     username: "admin"
     password: "admin"
 
@@ -35,18 +35,24 @@
     - name: Create YAML variables file for services from XLS
       template:
         src: templates/services.j2
-        dest: variables/services-variables.yaml
+        dest: variables/services-variable.yaml
 
     - name: Create YAML variables file for service groups from XLS
       template:
         src: templates/servicegroups.j2
-        dest: variables/servicegroups-variables.yaml
+        dest: variables/servicegroups-variable.yaml
     
-    - name: Import task to create Network Addresses
-      include_tasks: tasks/createnetworkaddresses-task.yaml
+    # - name: Import task to create Network Addresses
+    #   include_tasks: tasks/createnetworkaddresses-task.yaml
 
     # - name: Import task to create Network Groups
     #   include_tasks: tasks/createnetworkgroup-task.yaml
+
+    # - name: Import task to create services objects
+    #   include_tasks: tasks/createserviceobjects-task.yaml
+      
+    - name: Import task to create service groups
+      include_tasks: tasks/createservicegroup-task.yaml
 
     # - name: Import Task to create Security Policy
     #   include_tasks: tasks/createpolicy.yaml

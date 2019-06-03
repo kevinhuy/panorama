@@ -1,16 +1,15 @@
 - name: Import's service-variables yaml file
   include_vars:
-    file: variables/services-variable.yaml
+    file: variables/servicegroups-variable.yaml
 
 - name: create service Objects
   panos_object:
     ip_address : "{{ ip_address }}"
     username: "{{ username }}"
     password: "{{ password }}"
-    serviceobject: "{{ item.name }}"
-    protocol: "{{ item.protocol }}"
-    destination_port : "{{ item.port }}"
+    servicegroup: "{{ item.name }}"
+    services: "{{ item.members }}"
     description: " Added by ansible "
     devicegroup: "Test"
     operation: "add"
-  with_items: "{{ services }}"
+  with_items: "{{ servicesgroups }}"

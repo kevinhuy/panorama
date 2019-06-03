@@ -1,0 +1,14 @@
+services:
+
+    - name: test_tcp
+      protocol: tcp
+      port: 1234
+
+    - name: test_udp
+      protocol: udp
+      port: 1234
+
+    - name: test2_tcp
+      protocol: tcp
+      port: 1456
+

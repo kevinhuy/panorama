@@ -1,11 +1,6 @@
-- name: Create YAML file from XLS to create network address objects
-  template:
-    src: networkgroup.j2
-    dest: create-objects/createnetworkgroups/networkgroup.yaml
-
 - name: Include the networkgroup.yaml file
   include_vars:
-    file: create-objects/createnetworkgroups/networkgroup.yaml
+    file: variables/networkgroup-variable.yaml
 
 
 - name : Create network Object Groups
