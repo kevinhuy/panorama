@@ -1,0 +1,11 @@
+policy:
+
+{% for entry in configxls.ansible_facts.spreadsheet_FirewallPolicies %}
+    - name: {{ entry.Name }}
+      description: {{ entry.Description }}
+      sourcezone: {{ entry.SourceZone }}
+      sourceip: {{ entry.SourceIP }}
+      destinationzone: {{ entry.DestinationZone }}
+      destinationip: {{ entry.DestinationIP }}
+      service: {{ entry.Service }}
+{% endfor %}

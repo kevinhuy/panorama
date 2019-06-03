@@ -1,0 +1,9 @@
+policy:
+
+    - name: test with ansible
+      description: with Ansible
+      sourcezone: Trust
+      sourceip: test1
+      destinationzone: Untrust
+      destinationip: test2
+      service: test_tcp

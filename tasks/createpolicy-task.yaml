@@ -1,0 +1,21 @@
+- name: Import the variables necessart to add security policies
+  include_vars:
+    file: variables/policy.yaml
+
+- name: create security policy
+  panos_security_rule:
+    ip_address: "{{ ip_address }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
+    operation: "add"
+    rule_name: "{{ item.name }}"
+    description: "{{ item.description }}"
+    source_zone: "{{ item.sourcezone }}"
+    source_ip: "{{ item.sourceip }}"
+    destination_zone: "{{ item.destinationzone }}"
+    destination_ip: "{{ item.destinationip }}"
+    service: "{{ item.service }}"
+    action: "allow"
+    devicegroup: "Test"
+    commit: "False"
+  with_items: "{{ policy }}"
