@@ -3,7 +3,7 @@ policy:
     - name: test with ansible
       description: with Ansible
       sourcezone: Trust
-      sourceip: test1
+      sourceip: [test1, test3]
       destinationzone: Untrust
-      destinationip: test2
-      service: test_tcp
+      destinationip: [test2, test4]
+      service: [test_group]

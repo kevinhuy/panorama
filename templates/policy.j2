@@ -4,8 +4,8 @@ policy:
     - name: {{ entry.Name }}
       description: {{ entry.Description }}
       sourcezone: {{ entry.SourceZone }}
-      sourceip: {{ entry.SourceIP }}
+      sourceip: [{{ entry.SourceIP }}]
       destinationzone: {{ entry.DestinationZone }}
-      destinationip: {{ entry.DestinationIP }}
-      service: {{ entry.Service }}
+      destinationip: [{{ entry.DestinationIP }}]
+      service: [{{ entry.Service }}]
 {% endfor %}
