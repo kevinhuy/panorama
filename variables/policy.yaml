@@ -2,10 +2,10 @@ policy:
 
     - name: test added by Ansible
       tag_name: ifw_coles_1
-      description: Policy ID 5.4.5.130 on coles side
-      sourcezone: [ifw_internal_1, ifw_sslvpn_1]
-      sourceip: [source_group, source_group1]
-      destinationzone: [ifw_interbrand_1, ifw_sslvpn_1]
-      destinationip: [dest_group, dest_group1]
-      service: [service_group1]
-      application: [ssl, web-browsing]
+      description: 
+      sourcezone: [ifw_internal_1]
+      sourceip: []
+      destinationzone: [ifw_interbrand_1]
+      destinationip: []
+      service: []
+      application: []

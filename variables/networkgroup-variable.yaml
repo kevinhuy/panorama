@@ -1,14 +1,23 @@
 networkgroup:
 
     - addressgroupname: "source_group" 
-      addressgroupip: "['test_source', 'Test_source_1']"
+      addressgroupip: "['test_source','Test_source_1']"
 
     - addressgroupname: "source_group1" 
-      addressgroupip: "['Test_source_2']"
+      addressgroupip: "['test_source_2']"
 
     - addressgroupname: "dest_group" 
       addressgroupip: "['test_dest_1']"
 
     - addressgroupname: "dest_group1" 
-      addressgroupip: "['test_dest_2', 'test_dest_3']"
+      addressgroupip: "['test_dest_2','test-dest_3']"
+
+    - addressgroupname: "" 
+      addressgroupip: "[]"
+
+    - addressgroupname: "" 
+      addressgroupip: "[]"
+
+    - addressgroupname: "" 
+      addressgroupip: "[]"
 

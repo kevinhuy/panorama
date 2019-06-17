@@ -9,11 +9,15 @@
 
   tasks:
 
-    - name:
+    - name: Import Secrets file | File Import
       include_vars:
         file: secrets.yaml
 
-    - name: Import XLS and convert to yaml facts
+    - name: Import policy details like security profile, position, rule type and log settings | File Import
+      include_vars:
+        file: details.yaml
+
+    - name: Import XLS and convert to yaml facts | xls_to_facts
       xls_to_facts:
         src: variables/configuration.xlsx
       register: configxls
@@ -22,27 +26,27 @@
     #   debug:
     #     msg: "{{ configxls }}"
 
-    - name: Create YAML variables file for network addresses from XLS
+    - name: Create YAML variables file for network addresses from XLS | template
       template:
         src: templates/networkadd.j2
         dest: variables/networkaddress-variable.yaml
 
-    - name: Create YAML variables file for network groups from XLS
+    - name: Create YAML variables file for network groups from XLS | template
       template:
         src: templates/networkgroup.j2
         dest: variables/networkgroup-variable.yaml
 
-    - name: Create YAML variables file for services from XLS
+    - name: Create YAML variables file for services from XLS | template
       template:
         src: templates/services.j2
         dest: variables/services-variable.yaml
 
-    - name: Create YAML variables file for service groups from XLS
+    - name: Create YAML variables file for service groups from XLS | template
       template:
         src: templates/servicegroups.j2
         dest: variables/servicegroups-variable.yaml
 
-    - name: Create YAML variables file for service policy from XLS
+    - name: Create YAML variables file for service policy from XLS | template
       template:
         src: templates/policy.j2
         dest: variables/policy.yaml
