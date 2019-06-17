@@ -11,11 +11,15 @@ This play-book takes a xls file as input to configure network objects, service o
     ```
 3. [xls_to_facts.py](https://raw.githubusercontent.com/mamullen13316/ansible_xls_to_facts/master/xls_to_facts.py) needs to be copied onto ansible/module/files/
 
-4. update panos_security_rule.py in galaxy roles to [this](https://raw.githubusercontent.com/PaloAltoNetworks/ansible-pan/f7cf604ab3c9c6eb2cab8f4fcc1653cb67251cee/library/panos_security_rule.py)
+4. update panos_security_rule.py in galaxy roles to [this](https://raw.githubusercontent.com/PaloAltoNetworks/ansible-pan/f7cf604ab3c9c6eb2cab8f4fcc1653cb67251cee/library/panos_security_rule.py). Use the following command to find the location of file on your environment 
+    ```
+    ansible-galaxy info PaloAltoNetworks.paloaltonetworks | grep path
+    ```
 
 # Files
 
-secrets.yaml contains the ip address of the panorama and the login credientials
+secrets.yaml contains the ip address of the panorama and the login credientials.
+details.yaml contains details like the security profile, position, rule type and log settings
 variables/configuration.xlsx is the input file. 
 
 
