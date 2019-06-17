@@ -29,6 +29,6 @@ Below are formats to follow when populating the input file.
     2. NetworkObjects Sheet - Objects can be a list but needs to be in single quotes (') eg:- 'member1','member2'.
 
 
-## usefule excel formulas for Network Object Groups
+##### usefule excel formulas for Network Object Groups
 =IF(ISBLANK(B2),"",CONCAT("'",B2,"'"))
 =TEXTJOIN(",",TRUE,G2:K2)
