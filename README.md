@@ -24,8 +24,8 @@ This playbook takes a .xlsx file as input to configure network objects, service 
 ### Input file [configuration.xlsx](https://gitlab.com/Sudarshan_K/panorama/blob/master/variables/configuration.xlsx)
 Below are formats to follow when populating the input file.
 1. Filename, Sheetnames and column names **can not** change.
-    1. FirewallPolicies Sheet - SourceZone, SourceIP, DestinationZone, DestinationIP, Application and Services can be either a list or a single value eg:- tcp_444, tcp_555 or tcp_444
-    2. NetworkObjects Sheet - Objects can be a list or a single value but needs to be in single quotes (') eg:- 'member1','member2' or 'member1'
+2. FirewallPolicies Sheet - SourceZone, SourceIP, DestinationZone, DestinationIP, Application and Services can be either a list or a single value eg:- tcp_444, tcp_555 or tcp_444
+3. NetworkObjects Sheet - Objects can be a list or a single value but needs to be in single quotes (') eg:- 'member1','member2' or 'member1'
 
 
 # Executing the playbook
