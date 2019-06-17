@@ -4,7 +4,10 @@ This play-book takes a xlsx file as input to configure network objects, service 
 
 # Pre-requisites
 
-1. [requirements.txt](https://gitlab.com/Sudarshan_K/panorama/raw/master/requirements.txt) has all the libraries that need to be installed
+1. [requirements.txt](https://gitlab.com/Sudarshan_K/panorama/raw/master/requirements.txt) has all the libraries that need to be installed  
+    ```
+    pip install -r requirements.txt
+    ```
 2. Requires you to install the Paloaltonetworks Galazy Role
     ```
     ansible-galaxy install PaloAltoNetworks.paloaltonetworks,v2.0.4 --force
