@@ -18,8 +18,8 @@ This play-book takes a xls file as input to configure network objects, service o
 
 # Files
 
-[secrets.yaml](https://gitlab.com/Sudarshan_K/panorama/raw/master/secrets.yaml) contains the ip address of the panorama and the login credientials.
-[details.yaml](https://gitlab.com/Sudarshan_K/panorama/raw/master/details.yaml) contains details like the security profile, position, rule type and log settings
+[secrets.yaml](https://gitlab.com/Sudarshan_K/panorama/raw/master/secrets.yaml) contains the ip address of the panorama and the login credientials.  
+[details.yaml](https://gitlab.com/Sudarshan_K/panorama/raw/master/details.yaml) contains details like the security profile, position, rule type and log settings  
 [configuration.xlsx](https://gitlab.com/Sudarshan_K/panorama/blob/master/variables/configuration.xlsx) is the input file. 
 
 ### Input file [configuration.xlsx](https://gitlab.com/Sudarshan_K/panorama/blob/master/variables/configuration.xlsx)
