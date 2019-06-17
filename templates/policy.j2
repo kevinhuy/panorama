@@ -4,9 +4,9 @@ policy:
     - name: {{ entry.Name }}
       tag_name: {{ entry.tag_name }}
       description: {{ entry.Description }}
-      sourcezone: {{ entry.SourceZone }}
+      sourcezone: [{{ entry.SourceZone }}]
       sourceip: [{{ entry.SourceIP }}]
-      destinationzone: {{ entry.DestinationZone }}
+      destinationzone: [{{ entry.DestinationZone }}]
       destinationip: [{{ entry.DestinationIP }}]
       service: [{{ entry.Service }}]
       application: [{{ entry.Application }}]

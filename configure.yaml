@@ -58,17 +58,17 @@
     #   debug:
     #     msg: "{{ check }}"
     
-    - name: Import task to create Network Addresses
-      include_tasks: tasks/createnetworkaddresses-task.yaml
+    # - name: Import task to create Network Addresses
+    #   include_tasks: tasks/createnetworkaddresses-task.yaml
 
-    - name: Import task to create Network Groups
-      include_tasks: tasks/createnetworkgroup-task.yaml
+    # - name: Import task to create Network Groups
+    #   include_tasks: tasks/createnetworkgroup-task.yaml
 
-    - name: Import task to create services objects
-      include_tasks: tasks/createserviceobjects-task.yaml
+    # - name: Import task to create services objects
+    #   include_tasks: tasks/createserviceobjects-task.yaml
       
-    - name: Import task to create service groups
-      include_tasks: tasks/createservicegroup-task.yaml
+    # - name: Import task to create service groups
+    #   include_tasks: tasks/createservicegroup-task.yaml
 
     - name: Include task to Configure security Policy
       include_tasks: tasks/createpolicy-task.yaml
