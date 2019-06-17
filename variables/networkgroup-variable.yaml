@@ -1,5 +1,14 @@
 networkgroup:
 
-    - addressgroupname: "grp_kmart_offices" 
-      addressgroupip: "['nok_10.122.92.0_23_kautoho', 'nok_10.232.0.0_16_brandallocation']"
+    - addressgroupname: "source_group" 
+      addressgroupip: "['test_source', 'Test_source_1']"
+
+    - addressgroupname: "source_group1" 
+      addressgroupip: "['Test_source_2']"
+
+    - addressgroupname: "dest_group" 
+      addressgroupip: "['test_dest_1']"
+
+    - addressgroupname: "dest_group1" 
+      addressgroupip: "['test_dest_2', 'test_dest_3']"
 

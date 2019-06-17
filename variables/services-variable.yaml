@@ -1,18 +1,10 @@
 services:
 
-    - name: test_tcp
+    - name: tcp_444
       protocol: tcp
-      port: 1234
+      port: 444
 
-    - name: test_udp
+    - name: udp_555
       protocol: udp
-      port: 1234
-
-    - name: test2_tcp
-      protocol: tcp
-      port: 1456
-
-    - name: test_range
-      protocol: tcp
-      port: 1000-2000
+      port: 555
 

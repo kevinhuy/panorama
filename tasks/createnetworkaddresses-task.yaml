@@ -11,7 +11,7 @@
     address: "{{ item.addressgroupip }}"
     address_type: "ip-netmask"
     description: "test"
-    devicegroup: "Test"
+    devicegroup: "{{ devicegroups }}"
     operation: "add"
   with_items: "{{ networkadd }}"
   when: item.addressgroupip.find('-') == -1
@@ -26,7 +26,7 @@
     address: "{{ item.addressgroupip }}"
     address_type: "ip-range"
     description: "test"
-    devicegroup: "Test"
+    devicegroup: "{{ devicegroups }}"
     operation: "add"
   with_items: "{{ networkadd }}"
   when: item.addressgroupip.find('-') != -1

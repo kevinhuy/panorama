@@ -11,7 +11,7 @@
     protocol: "{{ item.protocol }}"
     destination_port : "{{ item.port }}"
     description: " Added by ansible "
-    devicegroup: "Test"
+    devicegroup: "{{ devicegroups }}"
     operation: "add"
   with_items: "{{ services }}"
   ignore_errors: true

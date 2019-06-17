@@ -3,15 +3,15 @@
   hosts: localhost
   gather_facts: False
   connection: local
-  vars:
-    ip_address: "192.168.50.218"
-    username: "admin"
-    password: "admin"
 
   roles:
     - role: PaloAltoNetworks.paloaltonetworks
 
   tasks:
+
+    - name:
+      include_vars:
+        file: secrets.yaml
 
     - name: Import XLS and convert to yaml facts
       xls_to_facts:
@@ -46,18 +46,29 @@
       template:
         src: templates/policy.j2
         dest: variables/policy.yaml
+
+    # - name: Panos check
+    #   panos_check:
+    #     ip_address: "{{ ip_address }}"
+    #     username: "{{ username }}"
+    #     password: "{{ password }}"
+    #   register: check
     
-    # - name: Import task to create Network Addresses
-    #   include_tasks: tasks/createnetworkaddresses-task.yaml
+    # - name: output check
+    #   debug:
+    #     msg: "{{ check }}"
+    
+    - name: Import task to create Network Addresses
+      include_tasks: tasks/createnetworkaddresses-task.yaml
 
     - name: Import task to create Network Groups
       include_tasks: tasks/createnetworkgroup-task.yaml
 
-    # - name: Import task to create services objects
-    #   include_tasks: tasks/createserviceobjects-task.yaml
+    - name: Import task to create services objects
+      include_tasks: tasks/createserviceobjects-task.yaml
       
-    # - name: Import task to create service groups
-    #   include_tasks: tasks/createservicegroup-task.yaml
+    - name: Import task to create service groups
+      include_tasks: tasks/createservicegroup-task.yaml
 
-    # - name: Include task to Configure security Policy
-    #   include_tasks: tasks/createpolicy-task.yaml
+    - name: Include task to Configure security Policy
+      include_tasks: tasks/createpolicy-task.yaml

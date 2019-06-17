@@ -10,7 +10,7 @@
     servicegroup: "{{ item.name }}"
     services: "{{ item.members }}"
     description: " Added by ansible "
-    devicegroup: "Test"
+    devicegroup: "{{ devicegroups }}"
     operation: "add"
   with_items: "{{ servicesgroups }}"
   ignore_errors: true
