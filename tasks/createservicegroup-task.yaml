@@ -1,4 +1,4 @@
-- name: Import's service-variables yaml file
+- name: Import service-variables yaml file
   include_vars:
     file: variables/servicegroups-variable.yaml
 
