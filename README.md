@@ -22,11 +22,11 @@ This play-book takes a xls file as input to configure network objects, service o
 [details.yaml](https://gitlab.com/Sudarshan_K/panorama/raw/master/details.yaml) contains details like the security profile, position, rule type and log settings
 [configuration.xlsx](https://gitlab.com/Sudarshan_K/panorama/blob/master/variables/configuration.xlsx) is the input file. 
 
-# Input file [configuration.xlsx](https://gitlab.com/Sudarshan_K/panorama/blob/master/variables/configuration.xlsx)
+### Input file [configuration.xlsx](https://gitlab.com/Sudarshan_K/panorama/blob/master/variables/configuration.xlsx)
 Below are formats to follow when populating the input file.
 1. Filename, Sheetnames and column names **can not** change.
-..1. FirewallPolicies Sheet - SourceZone, SourceIP, DestinationZone, DestinationIP, Application and Services can be either a list of comma        seperated values or a single value.
-..2. NetworkObjects Sheet - Objects can be a list but needs to be in single quotes (') eg:- 'member1','member2'.
+    1. FirewallPolicies Sheet - SourceZone, SourceIP, DestinationZone, DestinationIP, Application and Services can be either a list of comma        seperated values or a single value.
+    2. NetworkObjects Sheet - Objects can be a list but needs to be in single quotes (') eg:- 'member1','member2'.
 
 
 ## usefule excel formulas for Network Object Groups
