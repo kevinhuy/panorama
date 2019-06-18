@@ -1,6 +1,6 @@
 # devicegroup: device group to which the config needs to be pushed
 # is-post_rule: set to true if the policie needs to be configured as a post-rule or to false if it needs to configured as a pre-rule
-# rule_type: universal, inter-zone, intra-zone
+# rule_type: universal, interzone, intrazone
 # position: the policy ID number where you want the policy to be configured at. 0 if you want it at the top and leave black if you want it at the end
 # log_start: true if you want to log at session start, false if not
 # log_end: true if you want to log at session end, false if not
