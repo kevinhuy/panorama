@@ -1,7 +1,7 @@
 ---
 - name: Play to push configuration to panorama
   hosts: localhost
-  gather_facts: False
+  gather_facts: false
   connection: local
 
   roles:
@@ -12,67 +12,86 @@
     - name: Import Secrets file | File Import
       include_vars:
         file: secrets.yaml
+      tags: include
 
-    - name: Import policy details like security profile, position, rule type and log settings | File Import
+    - name: Import policy attributes like security profile, position rule type and log settings | File Import
       include_vars:
-        file: details.yaml
+        file: attributes.yaml
+      tags: include
 
     - name: Import XLS and convert to yaml facts | xls_to_facts
       xls_to_facts:
         src: variables/configuration.xlsx
       register: configxls
+      tags: xls_to_facts
 
     # - name: Print variables
     #   debug:
     #     msg: "{{ configxls }}"
+    #   tags: xls_to_facts, debug
 
     - name: Create YAML variables file for network addresses from XLS | template
       template:
         src: templates/networkadd.j2
         dest: variables/networkaddress-variable.yaml
+      tags: template, networkaddress
 
     - name: Create YAML variables file for network groups from XLS | template
       template:
         src: templates/networkgroup.j2
         dest: variables/networkgroup-variable.yaml
+      tags: template, networkgroup
 
     - name: Create YAML variables file for services from XLS | template
       template:
         src: templates/services.j2
         dest: variables/services-variable.yaml
+      tags: template, services
 
     - name: Create YAML variables file for service groups from XLS | template
       template:
         src: templates/servicegroups.j2
         dest: variables/servicegroups-variable.yaml
+      tags: template, servicegroups
 
     - name: Create YAML variables file for service policy from XLS | template
       template:
         src: templates/policy.j2
         dest: variables/policy.yaml
-
+      tags: template, securitypolicy
+    #
     # - name: Panos check
     #   panos_check:
     #     ip_address: "{{ ip_address }}"
     #     username: "{{ username }}"
     #     password: "{{ password }}"
     #   register: check
-    
+    #
     # - name: output check
     #   debug:
     #     msg: "{{ check }}"
-    
-    # - name: Import task to create Network Addresses
-    #   include_tasks: tasks/createnetworkaddresses-task.yaml
+    #
+    - name: Import task to create Network Addresses
+      include_tasks: tasks/createnetworkaddresses-task.yaml
+      tags: configure, networkaddress
 
-    # - name: Import task to create Network Groups
-    #   include_tasks: tasks/createnetworkgroup-task.yaml
+    - name: Import task to create Network Groups
+      include_tasks: tasks/createnetworkgroup-task.yaml
+      tags: configure, networkobjects
 
-    # - name: Import task to create services objects
-    #   include_tasks: tasks/createserviceobjects-task.yaml
-      
-    # - name: Import task to create service groups
-    #   include_tasks: tasks/createservicegroup-task.yaml
+    - name: Import task to create services objects
+      include_tasks: tasks/createserviceobjects-task.yaml
+      tags: configure, services
+
+    - name: Import task to create service groups
+      include_tasks: tasks/createservicegroup-task.yaml
+      tags: configure, servicegroups
 
     - name: Include task to Configure security Policy
       include_tasks: tasks/createpolicy-task.yaml
+      tags: configure, securitypolicy
+
+    - name: Commit changes to the device
+      include_tasks: tasks/commit-task.yaml
+      tags: commit
+...

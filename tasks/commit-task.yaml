@@ -1,0 +1,6 @@
+- name: Commit pending Panorama changes
+  panos_commit:
+    ip_address: "{{ ip_address }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
+    devicegroup: "{{ devicegroups }}"
