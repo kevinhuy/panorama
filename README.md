@@ -4,7 +4,6 @@ This playbook takes a .xlsx file as input to configure network objects, service 
 
 # Pre-requisites
 
-<<<<<<< HEAD
 1. [requirements.txt](https://gitlab.com/Sudarshan_K/panorama/raw/master/requirements.txt) has all the libraries that need to be installed  
     ```
     pip install -r requirements.txt
@@ -13,7 +12,6 @@ This playbook takes a .xlsx file as input to configure network objects, service 
 =======
 1. [requirements.txt](https://gitlab.com/Sudarshan_K/panorama/raw/master/requirements.txt) has all the libraries that need to be installed.  
 2. Requires you to install the Paloaltonetworks galaxy role
->>>>>>> 0a1237ee69596aeb3ab400eb01bf885421408fbf
     ```
     ansible-galaxy install PaloAltoNetworks.paloaltonetworks,v2.0.4 --force
     ```
