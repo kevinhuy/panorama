@@ -1,7 +1,6 @@
 policy:
 
 {% for entry in configxls.ansible_facts.spreadsheet_FirewallPolicies_postrule %}
-{% if entry.PostRule|upper == "TRUE" %}
     - Operation: {{ entry.Operation }}
       name: {{ entry.Name }}
       description: {{ entry.Description }}
@@ -20,8 +19,6 @@ policy:
       action: {{ entry.Action }}
       group_profile: {{ entry.SecurityProfile }}
       position: {{ entry.Position }}
-      is_post_rule: {{ entry.PostRule }}
       log_start: {{ entry.LogStart }}
       log_end: {{ entry.LogEnd }}
-{% endif %}
 {% endfor %}

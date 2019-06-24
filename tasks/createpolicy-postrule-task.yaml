@@ -26,7 +26,7 @@
     log_start: "{{ item.log_start }}"
     log_end: "{{ item.log_end }}"
     group_profile: "{{ item.group_profile }}"
-    is_post_rule: "{{ item.is_post_rule }}"
+    is_post_rule: True
     position: "{{ item.position }}"
     commit: "False"
   when: policy  != None

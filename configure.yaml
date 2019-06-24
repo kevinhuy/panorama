@@ -71,25 +71,25 @@
     #   debug:
     #     msg: "{{ check }}"
     #
-    # - name: Create Network Addresses
-    #   include_tasks: tasks/createnetworkaddresses-task.yaml
-    #   tags: configure, networkaddress
+    - name: Create Network Addresses
+      include_tasks: tasks/createnetworkaddresses-task.yaml
+      tags: configure, networkaddress
 
-    # - name: Create Network Groups
-    #   include_tasks: tasks/createnetworkgroup-task.yaml
-    #   tags: configure, networkobjects
+    - name: Create Network Groups
+      include_tasks: tasks/createnetworkgroup-task.yaml
+      tags: configure, networkobjects
 
-    # - name: Create services objects
-    #   include_tasks: tasks/createserviceobjects-task.yaml
-    #   tags: configure, services
+    - name: Create services objects
+      include_tasks: tasks/createserviceobjects-task.yaml
+      tags: configure, services
 
     - name: Create service groups
       include_tasks: tasks/createservicegroup-task.yaml
       tags: configure, servicegroups
 
-    # - name: Configure security Policy - post rule if any
-    #   include_tasks: tasks/createpolicy-postrule-task.yaml
-    #   tags: configure, securitypolicy
+    - name: Configure security Policy - post rule if any
+      include_tasks: tasks/createpolicy-postrule-task.yaml
+      tags: configure, securitypolicy
 
     # - name: Commit changes to the device
     #   include_tasks: tasks/commit-task.yaml
