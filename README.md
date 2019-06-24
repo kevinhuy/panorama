@@ -33,8 +33,9 @@ This playbook takes a .xlsx file as input to configure network objects, service 
 ### Input file [configuration.xlsx](https://gitlab.com/Sudarshan_K/panorama/blob/master/variables/configuration.xlsx)
 Below are formats to follow when populating the input file.
 1. Filename, Sheetnames and column names **can not** change.
-2. FirewallPolicies_postrules Sheet - Defines the Post rules. Refer to the metadata for details on each column.
-3. NetworkObjects Sheet - Defines the Network Objects. Objects can be a list or a single value but needs to be in single quotes (') eg:- 'member1','member2' or 'member1'
+2. FirewallPolicies_postrules Sheet - Defines the Post rules. Refer to the [metadata] file for details.
+2. NetworkObjects - Defined the Network Objects. Refer to the [metadata] file for details.
+3. NetworkGroup Sheet - Defines the Network Objects. Objects can be a list or a single value but needs to be in single quotes (') eg:- 'member1','member2' or 'member1'
 
 
 # Executing the playbook
