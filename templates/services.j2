@@ -4,5 +4,8 @@ services:
     - name: {{ entry.Name }}
       protocol: {{ entry.Protocol | lower }}
       port: {{ entry.Port_Number }}
+      devicegroup: {{ entry.Devicegroup }}
+      description: {{ entry.Description }}
+      operation: {{ entry.Operation }}
 
 {% endfor %}

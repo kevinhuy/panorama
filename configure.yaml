@@ -14,10 +14,10 @@
         file: secrets.yaml
       tags: include
 
-    - name: Import policy attributes like security profile, position rule type and log settings | File Import
-      include_vars:
-        file: attributes.yaml
-      tags: include
+    # - name: Import policy attributes like security profile, position rule type and log settings | File Import
+    #   include_vars:
+    #     file: attributes.yaml
+    #   tags: include
 
     - name: Import XLS and convert to yaml facts | xls_to_facts
       xls_to_facts:
@@ -56,8 +56,8 @@
 
     - name: Create YAML variables file for service policy from XLS | template
       template:
-        src: templates/policy.j2
-        dest: variables/policy.yaml
+        src: templates/securitypolicy-postrule.j2
+        dest: variables/securitypolicy-postrule-variable.yaml
       tags: template, securitypolicy
     #
     # - name: Panos check
@@ -71,27 +71,27 @@
     #   debug:
     #     msg: "{{ check }}"
     #
-    - name: Import task to create Network Addresses
-      include_tasks: tasks/createnetworkaddresses-task.yaml
-      tags: configure, networkaddress
+    # - name: Create Network Addresses
+    #   include_tasks: tasks/createnetworkaddresses-task.yaml
+    #   tags: configure, networkaddress
 
-    - name: Import task to create Network Groups
-      include_tasks: tasks/createnetworkgroup-task.yaml
-      tags: configure, networkobjects
+    # - name: Create Network Groups
+    #   include_tasks: tasks/createnetworkgroup-task.yaml
+    #   tags: configure, networkobjects
 
-    - name: Import task to create services objects
-      include_tasks: tasks/createserviceobjects-task.yaml
-      tags: configure, services
+    # - name: Create services objects
+    #   include_tasks: tasks/createserviceobjects-task.yaml
+    #   tags: configure, services
 
-    - name: Import task to create service groups
+    - name: Create service groups
       include_tasks: tasks/createservicegroup-task.yaml
       tags: configure, servicegroups
 
-    - name: Include task to Configure security Policy
-      include_tasks: tasks/createpolicy-task.yaml
-      tags: configure, securitypolicy
+    # - name: Configure security Policy - post rule if any
+    #   include_tasks: tasks/createpolicy-postrule-task.yaml
+    #   tags: configure, securitypolicy
 
-    - name: Commit changes to the device
-      include_tasks: tasks/commit-task.yaml
-      tags: commit
+    # - name: Commit changes to the device
+    #   include_tasks: tasks/commit-task.yaml
+    #   tags: commit
 ...

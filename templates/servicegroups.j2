@@ -3,5 +3,8 @@ servicesgroups:
 {% for entry in configxls.ansible_facts.spreadsheet_ServiceGroups %}
     - name: {{ entry.Name }}
       members: [{{ entry.Members }}]
+      devicegroup: {{ entry.Devicegroup }}
+      description: {{ entry.Description }}
+      operation: {{ entry.Operation }}
 
 {% endfor %}

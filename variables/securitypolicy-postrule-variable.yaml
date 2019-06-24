@@ -1,0 +1,23 @@
+policy:
+
+    - Operation: add
+      name: test added by Ansible
+      description: test
+      devicegroup: Test
+      tag_name: ifw_coles_1
+      rule_type: interzone
+      source_zone: [ifw_internal_1]
+      source_ip: [any]
+      source_user: [test1]
+      hip_profiles: [test, test2]
+      destination_zone: [ifw_interbrand_1]
+      destination_ip: [any]
+      url_filtering: [ any]
+      application: [any]
+      service: [any]
+      action: allow
+      group_profile: spg_au_dc_strict
+      position: 0
+      is_post_rule: True
+      log_start: True
+      log_end: False

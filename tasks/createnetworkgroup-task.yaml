@@ -10,8 +10,8 @@
     password: "{{ password }}"
     addressgroup: "{{ item.addressgroupname }}"
     static_value: "{{ item.addressgroupip }}"
-    description: " pushed through Ansibel"
-    devicegroup: "Test"
-    operation: "add"
+    description: "{{ item.description }}"
+    devicegroup: "{{ item.devicegroup }}"
+    operation: "{{ item.operation }}"
   with_items: "{{ networkgroup }}"
   ignore_errors: true

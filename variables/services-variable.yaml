@@ -3,8 +3,21 @@ services:
     - name: tcp_444
       protocol: tcp
       port: 444
+      devicegroup: Test
+      description: Test
+      operation: add
 
     - name: udp_555
       protocol: udp
       port: 555
+      devicegroup: Test
+      description: Test
+      operation: add
+
+    - name: tcp_9999
+      protocol: tcp
+      port: 9999
+      devicegroup: Test
+      description: Test
+      operation: add
 

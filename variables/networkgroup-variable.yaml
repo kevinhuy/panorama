@@ -1,23 +1,44 @@
 networkgroup:
 
     - addressgroupname: "source_group" 
-      addressgroupip: "['test_source','Test_source_1']"
+      addressgroupip: "['test_source','test_source_1']"
+      devicegroup: "Test"
+      description: "Test"
+      operation: "add"
 
     - addressgroupname: "source_group1" 
       addressgroupip: "['test_source_2']"
+      devicegroup: "Test"
+      description: "Test"
+      operation: "add"
 
     - addressgroupname: "dest_group" 
       addressgroupip: "['test_dest_1']"
+      devicegroup: "Test"
+      description: "Test"
+      operation: "add"
 
     - addressgroupname: "dest_group1" 
-      addressgroupip: "['test_dest_2','test-dest_3']"
+      addressgroupip: "['test_dest_2','test_dest_3']"
+      devicegroup: "Test"
+      description: "Test"
+      operation: "add"
 
     - addressgroupname: "" 
       addressgroupip: "[]"
+      devicegroup: ""
+      description: ""
+      operation: ""
 
     - addressgroupname: "" 
       addressgroupip: "[]"
+      devicegroup: ""
+      description: ""
+      operation: ""
 
     - addressgroupname: "" 
       addressgroupip: "[]"
+      devicegroup: ""
+      description: ""
+      operation: ""
 

@@ -10,9 +10,9 @@
     addressobject: "{{ item.addressgroupname }}"
     address: "{{ item.addressgroupip }}"
     address_type: "ip-netmask"
-    description: "test"
-    devicegroup: "{{ devicegroups }}"
-    operation: "add"
+    description: "{{ item.description }}"
+    devicegroup: "{{ item.devicegroup }}"
+    operation: "{{ item.operation }}"
   with_items: "{{ networkadd }}"
   when: item.addressgroupip.find('-') == -1
   ignore_errors: true
@@ -25,9 +25,9 @@
     addressobject: "{{ item.addressgroupname }}"
     address: "{{ item.addressgroupip }}"
     address_type: "ip-range"
-    description: "test"
-    devicegroup: "{{ devicegroups }}"
-    operation: "add"
+    description: "{{ item.description }}"
+    devicegroup: "{{ item.devicegroup }}"
+    operation: "{{ item.operation }}"
   with_items: "{{ networkadd }}"
   when: item.addressgroupip.find('-') != -1
   ignore_errors: true

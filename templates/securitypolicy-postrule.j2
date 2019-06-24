@@ -1,0 +1,27 @@
+policy:
+
+{% for entry in configxls.ansible_facts.spreadsheet_FirewallPolicies_postrule %}
+{% if entry.PostRule|upper == "TRUE" %}
+    - Operation: {{ entry.Operation }}
+      name: {{ entry.Name }}
+      description: {{ entry.Description }}
+      devicegroup: {{ entry.Devicegroup }}
+      tag_name: {{ entry.Tags }}
+      rule_type: {{ entry.Type }}
+      source_zone: [{{ entry.SourceZone }}]
+      source_ip: [{{ entry.SourceIP }}]
+      source_user: [{{ entry.SourceUser }}]
+      hip_profiles: [{{ entry.HIPProfile }}]
+      destination_zone: [{{ entry.DestinationZone }}]
+      destination_ip: [{{ entry.DestinationIP }}]
+      url_filtering: [ {{ entry.URLCategory }}]
+      application: [{{ entry.Application }}]
+      service: [{{ entry.Service }}]
+      action: {{ entry.Action }}
+      group_profile: {{ entry.SecurityProfile }}
+      position: {{ entry.Position }}
+      is_post_rule: {{ entry.PostRule }}
+      log_start: {{ entry.LogStart }}
+      log_end: {{ entry.LogEnd }}
+{% endif %}
+{% endfor %}

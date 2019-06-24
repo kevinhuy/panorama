@@ -2,4 +2,13 @@ servicesgroups:
 
     - name: service_group1
       members: [tcp_444, udp_555]
+      devicegroup: Test
+      description: test
+      operation: add
+
+    - name: service_group2
+      members: [tcp_9999]
+      devicegroup: Test
+      description: test
+      operation: add
 

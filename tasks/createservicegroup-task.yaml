@@ -9,8 +9,8 @@
     password: "{{ password }}"
     servicegroup: "{{ item.name }}"
     services: "{{ item.members }}"
-    description: " Added by ansible "
-    devicegroup: "{{ devicegroups }}"
-    operation: "add"
+    description: "{{ item.description }}"
+    devicegroup: "{{ item.devicegroup }}"
+    operation: "{{ item.operation }}"
   with_items: "{{ servicesgroups }}"
   ignore_errors: true

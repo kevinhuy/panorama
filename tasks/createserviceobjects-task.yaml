@@ -10,8 +10,8 @@
     serviceobject: "{{ item.name }}"
     protocol: "{{ item.protocol }}"
     destination_port : "{{ item.port }}"
-    description: " Added by ansible "
-    devicegroup: "{{ devicegroups }}"
-    operation: "add"
+    description: "{{ item.description }}"
+    devicegroup: "{{ item.devicegroup }}"
+    operation: "{{ item.operation }}"
   with_items: "{{ services }}"
   ignore_errors: true
