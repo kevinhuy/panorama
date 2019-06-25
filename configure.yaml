@@ -83,12 +83,18 @@
     - name: Create Network Addresses
       include_tasks: tasks/createnetworkaddresses-task.yaml
       when: networkadd != None
-      with_items: "{{ netwrokadd }}"
+      with_items: "{{ networkadd }}"
       tags: configure, networkaddress
 
-    # - name: Create Network Groups
-    #   include_tasks: tasks/createnetworkgroup-task.yaml
-    #   tags: configure, networkobjects
+    - name: Include the networkgroup.yaml file
+      include_vars:
+        file: variables/networkgroup-variable.yaml
+
+    - name: Create Network Groups
+      include_tasks: tasks/createnetworkgroup-task.yaml
+      when: networkgroup != None
+      with_items: "{{ networkgroup }}"
+      tags: configure, networkobjects
 
     # - name: Create services objects
     #   include_tasks: tasks/createserviceobjects-task.yaml
@@ -98,15 +104,15 @@
     #   include_tasks: tasks/createservicegroup-task.yaml
     #   tags: configure, servicegroups
 
-    - name: Import the variables necessart to add security policies
-      include_vars:
-        file: variables/securitypolicy-postrule-variable.yaml
+    # - name: Import the variables necessart to add security policies
+    #   include_vars:
+    #     file: variables/securitypolicy-postrule-variable.yaml
 
-    - name: Configure security Policy - post rule if any
-      include_tasks: tasks/createpolicy-postrule-task.yaml
-      when: policy  != None
-      with_items: "{{ policy }}"
-      tags: configure, securitypolicy
+    # - name: Configure security Policy - post rule if any
+    #   include_tasks: tasks/createpolicy-postrule-task.yaml
+    #   when: policy  != None
+    #   with_items: "{{ policy }}"
+    #   tags: configure, securitypolicy
 
     # - name: Configure security Policy - pre rule if any
     #   include_tasks: tasks/createpolicy-prerule-task.yaml

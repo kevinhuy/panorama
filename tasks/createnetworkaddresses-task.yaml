@@ -34,4 +34,4 @@
 
 - name: 
   debug:
-    msg: "{{ item.name }} {{ result.changed }}"
+    msg: "{{ result }}"

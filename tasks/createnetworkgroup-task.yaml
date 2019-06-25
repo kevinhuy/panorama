@@ -1,8 +1,3 @@
-- name: Include the networkgroup.yaml file
-  include_vars:
-    file: variables/networkgroup-variable.yaml
-
-
 - name : Create network Object Groups
   panos_object:
     ip_address: "{{ ip_address }}"
@@ -13,5 +8,4 @@
     description: "{{ item.description }}"
     devicegroup: "{{ item.devicegroup }}"
     operation: "{{ item.operation }}"
-  with_items: "{{ networkgroup }}"
   ignore_errors: true

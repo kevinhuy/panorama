@@ -20,3 +20,678 @@ policy:
       position: 1054
       log_start: False
       log_end: True
+      
+    - Operation: add
+      name: Coles_active_directory
+      description: Active Policies added during Coles demerger project - Policy ID 5.4.5.137, 5.4.5.139 on Coles side
+      devicegroup: dg_au_dc_innerfw
+      tag_name: ifw_coles_1
+      rule_type: interzone
+      source_zone: [ifw_internal_1, ifw_sslvpn_1]
+      source_ip: [gok_kmart_dcs,gok_kmart_offices, gok_kmart_sslvpnpools, gok_core_stores]
+      source_user: [any]
+      hip_profiles: [any]
+      destination_zone: [ifw-coles_1]
+      destination_ip: [goc_coles_ad]
+      category: [ any]
+      application: [any]
+      service: [tcp_123, tcp_135, tcp_137, tcp_139, tcp_3268, tcp_3269, tcp_389, tcp_445, tcp_53, tcp_636, tcp_88, tcp_464, tcp_9389, tcp_24158, udp_123, udp_137, udp_138, udp_53, udp_636, udp_389, udp_445, udp_464, udp_88, tcp_1025, tcp_59001, tcp_80]
+      action: allow
+      group_profile: spg_au_dc_strict
+      position: 1054
+      log_start: False
+      log_end: True
+      
+    - Operation: add
+      name: Coles_CMLCONNECT_1
+      description: Active Policies added during Coles demerger project - Policy ID 5.4.5.186 on Coles side
+      devicegroup: dg_au_dc_innerfw
+      tag_name: ifw_coles_1
+      rule_type: interzone
+      source_zone: [ifw_internal_1, ifw_sslvpn_1]
+      source_ip: [gok_kmart_dcs,gok_kmart_offices, gok_kmart_sslvpnpools, gok_core_stores]
+      source_user: [any]
+      hip_profiles: [any]
+      destination_zone: [ifw-coles_1]
+      destination_ip: [hoc_172.25.163.216_scripts.CMLCONNECT.ORG
+hoc_172.25.184.226_portal_cmlconnect_org]
+      category: [ any]
+      application: [any]
+      service: [tcp_7443]
+      action: allow
+      group_profile: spg_au_dc_strict
+      position: 1054
+      log_start: False
+      log_end: True
+      
+    - Operation: add
+      name: Coles_CMLCONNECT_2
+      description: Active Policies added during Coles demerger project - Policy ID 5.4.5.188 on Coles side
+      devicegroup: dg_au_dc_innerfw
+      tag_name: ifw_coles_1
+      rule_type: interzone
+      source_zone: [ifw_internal_1]
+      source_ip: [gok_Kmart_all]
+      source_user: [any]
+      hip_profiles: [any]
+      destination_zone: [ifw-coles_1]
+      destination_ip: [hoc_172.25.184.228_portal_cmlconnect_org_test]
+      category: [ any]
+      application: [any]
+      service: [tcp_443, tcp_80]
+      action: allow
+      group_profile: spg_au_dc_strict
+      position: 1054
+      log_start: False
+      log_end: True
+      
+    - Operation: add
+      name: Coles_dial_time_gateway
+      description: Active Policies added during Coles demerger project - Policy ID 5.4.5.190 on Coles side
+      devicegroup: dg_au_dc_innerfw
+      tag_name: ifw_coles_1
+      rule_type: interzone
+      source_zone: [ifw_internal_1, ifw_sslvpn_1]
+      source_ip: [gok_kmart_dcs,gok_kmart_offices, gok_kmart_sslvpnpools, gok_core_stores]
+      source_user: [any]
+      hip_profiles: [any]
+      destination_zone: [ifw-coles_1]
+      destination_ip: [hoc_172.25.163.66_wpdtimedev01vm, hoc_172.25.163.90_WPDTIME01VM, hoc_172.25.163.92_WPDTIME02VM, hoc_172.25.174.79_WPSQL14E, hoc_172.25.191.113_wpclsql10e, hoc_172.25.191.152_wpclsql11e, hoc_172.25.29.148_wpsql01, hoc_172.25.31.50_ironbark, hoc_172.25.31.55_spruce, hoc_172.25.41.73_wpdms02, hoc_172.25.71.56_wtsql14, hoc_172.25.29.153_wpsql06]
+      category: [ any]
+      application: [any]
+      service: [tcp_135, tcp_139, tcp_1433, tcp_2107]
+      action: allow
+      group_profile: spg_au_dc_strict
+      position: 1054
+      log_start: False
+      log_end: True
+      
+    - Operation: add
+      name: Coles_DNS
+      description: Active Policies added during Coles demerger project - Policy ID 5.4.5.95, 5.4.5.238 and 5.4.5.677 on Coles side
+      devicegroup: dg_au_dc_innerfw
+      tag_name: ifw_coles_1
+      rule_type: interzone
+      source_zone: [ifw_internal_1]
+      source_ip: [gok_Kmart_all]
+      source_user: [any]
+      hip_profiles: [any]
+      destination_zone: [ifw-coles_1]
+      destination_ip: [goc_wins, goc_internal_dns, hoc_172.25.12.21_wpad01,hoc_192.168.173.111_lpextdns1n2, hoc_192.168.173.112_lpextdns2n2]
+      category: [ any]
+      application: [any]
+      service: [tcp_53, udp_53]
+      action: allow
+      group_profile: spg_au_dc_strict
+      position: 1054
+      log_start: False
+      log_end: True
+      
+    - Operation: add
+      name: Coles_HP_NNM
+      description: Active Policies added during Coles demerger project - Policy ID 5.4.5.265 on Coles side
+      devicegroup: dg_au_dc_innerfw
+      tag_name: ifw_coles_1
+      rule_type: interzone
+      source_zone: [ifw_internal_1]
+      source_ip: [gok_Kmart_all]
+      source_user: [any]
+      hip_profiles: [any]
+      destination_zone: [ifw-coles_1]
+      destination_ip: [hoc_172.25.151.51_utnnm, hoc_172.25.151.52_utnnm]
+      category: [ any]
+      application: [any]
+      service: [tcp_2953, tcp_2954, tcp_3443, tcp_7510, udp_162]
+      action: allow
+      group_profile: spg_au_dc_strict
+      position: 1054
+      log_start: False
+      log_end: True
+      
+    - Operation: add
+      name: Coles_idm
+      description: Active Policies added during Coles demerger project - Policy ID 5.4.5.187 on Coles side
+      devicegroup: dg_au_dc_innerfw
+      tag_name: ifw_coles_1
+      rule_type: interzone
+      source_zone: [ifw_internal_1]
+      source_ip: [gok_kmart_dcs,gok_kmart_offices, gok_kmart_sslvpnpools]
+      source_user: [any]
+      hip_profiles: [any]
+      destination_zone: [ifw-coles_1]
+      destination_ip: [hoc_172.27.255.84_idmutils]
+      category: [ any]
+      application: [any]
+      service: [tcp_443]
+      action: allow
+      group_profile: spg_au_dc_strict
+      position: 1054
+      log_start: False
+      log_end: True
+      
+    - Operation: add
+      name: Coles_INGENICO_TMS
+      description: Active Policies added during Coles demerger project - Policy ID 5.4.5.729 on Coles side
+      devicegroup: dg_au_dc_innerfw
+      tag_name: ifw_coles_1
+      rule_type: interzone
+      source_zone: [ifw_internal_1]
+      source_ip: [gok_Kmart_all]
+      source_user: [any]
+      hip_profiles: [any]
+      destination_zone: [ifw-coles_1]
+      destination_ip: [hoc_192.168.96.52_TMS_Prod
+hoc_192.168.241.87_Ingenico_Kidman]
+      category: [ any]
+      application: [any]
+      service: [tcp_443, tcp_80, tcp_7000]
+      action: allow
+      group_profile: spg_au_dc_strict
+      position: 1054
+      log_start: False
+      log_end: True
+      
+    - Operation: add
+      name: Coles_management
+      description: Active Policies added during Coles demerger project - Policy ID 5.4.5.214 on Coles side
+      devicegroup: dg_au_dc_innerfw
+      tag_name: ifw_coles_1
+      rule_type: interzone
+      source_zone: [ifw_internal_1, ifw_sslvpn_1]
+      source_ip: [gok_kmart_offices, gok_kmart_sslvpnpools]
+      source_user: [any]
+      hip_profiles: [any]
+      destination_zone: [ifw-coles_1]
+      destination_ip: [goc_coles_serverfarm]
+      category: [ any]
+      application: [any]
+      service: [tcp_22, tcp_23, tcp_3389, tcp_443, tcp_445, tcp_80]
+      action: allow
+      group_profile: spg_au_dc_strict
+      position: 1054
+      log_start: False
+      log_end: True
+      
+    - Operation: add
+      name: Coles_netdev
+      description: Active Policies added during Coles demerger project - Policy ID 5.4.5.438 on Coles side
+      devicegroup: dg_au_dc_innerfw
+      tag_name: ifw_coles_1
+      rule_type: interzone
+      source_zone: [ifw_internal_1]
+      source_ip: [nok_10.232.0.0-16_BrandAllocation]
+      source_user: [any]
+      hip_profiles: [any]
+      destination_zone: [ifw-coles_1]
+      destination_ip: [noc_172.28.0.0_coles_dev]
+      category: [ any]
+      application: [any]
+      service: [any]
+      action: allow
+      group_profile: spg_au_dc_strict
+      position: 1054
+      log_start: False
+      log_end: True
+      
+    - Operation: add
+      name: Coles_ntp
+      description: Active Policies added during Coles demerger project - Policy ID 5.4.5.680 on Coles side
+      devicegroup: dg_au_dc_innerfw
+      tag_name: ifw_coles_1
+      rule_type: interzone
+      source_zone: [ifw_internal_1]
+      source_ip: [gok_Kmart_all]
+      source_user: [any]
+      hip_profiles: [any]
+      destination_zone: [ifw-coles_1]
+      destination_ip: [hoc_192.168.180.50_ntp1, hoc_192.168.180.51_ntp2]
+      category: [ any]
+      application: [any]
+      service: [udp_123]
+      action: allow
+      group_profile: spg_au_dc_strict
+      position: 1054
+      log_start: False
+      log_end: True
+      
+    - Operation: add
+      name: Coles_owa
+      description: Active Policies added during Coles demerger project - Policy ID 5.4.5.273, 5.4.5.274 on Coles side
+      devicegroup: dg_au_dc_innerfw
+      tag_name: ifw_coles_1
+      rule_type: interzone
+      source_zone: [ifw_internal_1]
+      source_ip: [gok_Kmart_all]
+      source_user: [any]
+      hip_profiles: [any]
+      destination_zone: [ifw-coles_1]
+      destination_ip: [hoc_172.25.184.159_coleswebmail, hoc_172.27.0.135_webmail.cmltd.net.au, hoc_172.27.0.136_as3g.coles.com.au]
+      category: [ any]
+      application: [any]
+      service: [tcp_80, tcp_443]
+      action: allow
+      group_profile: spg_au_dc_strict
+      position: 1054
+      log_start: False
+      log_end: True
+      
+    - Operation: add
+      name: Coles_proxy
+      description: Active Policies added during Coles demerger project - Policy ID 5.4.5.709, 5.4.5.710 on Coles side
+      devicegroup: dg_au_dc_innerfw
+      tag_name: ifw_coles_1
+      rule_type: interzone
+      source_zone: [ifw_internal_1]
+      source_ip: [gok_Kmart_all]
+      source_user: [any]
+      hip_profiles: [any]
+      destination_zone: [ifw-coles_1]
+      destination_ip: [goc_proxyservers]
+      category: [ any]
+      application: [any]
+      service: [tcp_21, tcp_8080]
+      action: allow
+      group_profile: spg_au_dc_strict
+      position: 1054
+      log_start: False
+      log_end: True
+      
+    - Operation: 
+      name: Coles_pwdreset_svr
+      description: Active Policies added during Coles demerger project - Policy ID 5.4.5.181 and 5.4.5.429 on Coles side
+      devicegroup: dg_au_dc_innerfw
+      tag_name: ifw_coles_1
+      rule_type: 
+      source_zone: [ifw_internal_1, ifw_sslvpn_1]
+      source_ip: [gok_kmart_dcs, gok_kmart_offices, gok_kmart_sslvpnpools, gok_core_stores, nok_172.31.0.0-16_KmartHO, gok_Kmart_all]
+      source_user: [any]
+      hip_profiles: [any]
+      destination_zone: [ifw-coles_1]
+      destination_ip: [hoc_172.27.0.72_passwordreset]
+      category: [ any]
+      application: [any]
+      service: [tcp_443,tcp_80]
+      action: allow
+      group_profile: spg_au_dc_strict
+      position: 1054
+      log_start: False
+      log_end: True
+      
+    - Operation: 
+      name: Coles_ent_tech
+      description: Active Policies added during Coles demerger project - Policy ID 5.4.5.64 and 5.4.5.65 on Coles side
+      devicegroup: dg_au_dc_innerfw
+      tag_name: ifw_coles_1
+      rule_type: 
+      source_zone: [ifw_internal_1]
+      source_ip: [gok_Kmart_all, nok_10.87.192.0-18_stores]
+      source_user: [any]
+      hip_profiles: [any]
+      destination_zone: [ifw-coles_1]
+      destination_ip: [gpc_qet_servers]
+      category: [ any]
+      application: [any]
+      service: [tcp_7000, tcp_5510, tcp_5522]
+      action: allow
+      group_profile: spg_au_dc_strict
+      position: 1054
+      log_start: False
+      log_end: True
+      
+    - Operation: 
+      name: Coles_sap
+      description: Active Policies added during Coles demerger project - Policy ID 5.4.5.62 on Coles side
+      devicegroup: dg_au_dc_innerfw
+      tag_name: ifw_coles_1
+      rule_type: 
+      source_zone: [ifw_internal_1]
+      source_ip: [nok_172.31.0.0-16_KmartHO]
+      source_user: [any]
+      hip_profiles: [any]
+      destination_zone: [ifw-coles_1]
+      destination_ip: [hoc_172.22.71.31_eds_test, hoc_172.25.182.39_connectuat2]
+      category: [ any]
+      application: [any]
+      service: [tcp_9443]
+      action: allow
+      group_profile: spg_au_dc_strict
+      position: 1054
+      log_start: False
+      log_end: True
+      
+    - Operation: 
+      name: Coles_sap_1
+      description: Active Policies added during Coles demerger project - Policy ID 5.4.5.66 and 5.4.5.591on Coles side
+      devicegroup: dg_au_dc_innerfw
+      tag_name: ifw_coles_1
+      rule_type: 
+      source_zone: [ifw_internal_1]
+      source_ip: [gok_Kmart_all]
+      source_user: [any]
+      hip_profiles: [any]
+      destination_zone: [ifw-coles_1]
+      destination_ip: [hoc_172.27.16.11_portal, hoc_172.27.16.35_login-iam-prd, hoc_172.27.17.23_login-iam-test, hoc_172.27.17.33_login-iam, hoc_172.27.17.39_login-iam-dev, hoc_172.27.17.91_portaltest, hoc_172.28.139.227_portaldev, hoc_172.25.184.226_portal_cmlconnect_org, hoc_172.25.182.22_portalsvt, hoc_172.27.17.11_tmpportalsvt, hoc_172.27.17.33_login-iam]
+      category: [ any]
+      application: [any]
+      service: [tcp_443,tcp_80]
+      action: allow
+      group_profile: spg_au_dc_strict
+      position: 1054
+      log_start: False
+      log_end: True
+      
+    - Operation: 
+      name: Coles_sap_2
+      description: Active Policies added during Coles demerger project - Policy ID 5.4.5.155 on Coles side
+      devicegroup: dg_au_dc_innerfw
+      tag_name: ifw_coles_1
+      rule_type: 
+      source_zone: [ifw_internal_1]
+      source_ip: [gok_Kmart_all]
+      source_user: [any]
+      hip_profiles: [any]
+      destination_zone: [ifw-coles_1]
+      destination_ip: [hoc_172.22.29.123_WPEPS02VM, hoc_172.22.29.67_WDEPS01VM, hoc_172.22.31.145_WPEPS01VM]
+      category: [ any]
+      application: [any]
+      service: [tcp_139,tcp_3000-5000,tcp_445]
+      action: allow
+      group_profile: spg_au_dc_strict
+      position: 1054
+      log_start: False
+      log_end: True
+      
+    - Operation: 
+      name: Coles_sap_3
+      description: Active Policies added during Coles demerger project - Policy ID 5.4.5.156 and 5.4.5.157 on Coles side
+      devicegroup: dg_au_dc_innerfw
+      tag_name: ifw_coles_1
+      rule_type: 
+      source_zone: [ifw_internal_1, ifw_sslvpn_1]
+      source_ip: [gok_kmart_dcs,gok_kmart_offices, gok_kmart_sslvpnpools, gok_core_stores]
+      source_user: [any]
+      hip_profiles: [any]
+      destination_zone: [ifw-coles_1]
+      destination_ip: [del_172.22.61.243_utsap1, del_172.22.61.30_sh0301ec, grp_SAP_new, hoc_172.22.160.46_udixos1, hoc_172.22.160.47_utsap1, hoc_172.22.160.49_sh0301ec, hoc_172.22.31.181_upsap3, hoc_172.22.61.100_upsap1, hoc_172.25.31.206_Uqsap3, hoc_172.25.61.114_uqsap1]
+      category: [ any]
+      application: [any]
+      service: [tcp_3241, tcp_3243, tcp_3641, tcp_3643, tcp_3612, tcp_3201, tcp_3202, tcp_3203, tcp_3211, tcp_3212, tcp_3222, tcp_3232, tcp_3242, tcp_3601, tcp_3602, tcp_3603, tcp_3622, tcp_3642, tcp_8022]
+      action: allow
+      group_profile: spg_au_dc_strict
+      position: 1054
+      log_start: False
+      log_end: True
+      
+    - Operation: 
+      name: Coles_sap_4
+      description: Active Policies added during Coles demerger project - Policy ID 5.4.5.488 on Coles side
+      devicegroup: dg_au_dc_innerfw
+      tag_name: ifw_coles_1
+      rule_type: 
+      source_zone: [ifw_internal_1]
+      source_ip: [gok_Kmart_all]
+      source_user: [any]
+      hip_profiles: [any]
+      destination_zone: [ifw-coles_1]
+      destination_ip: [hoc_172.22.4.71_ZSTLLTCM601, hoc_172.22.71.48_wpsapepprd02, hoc_172.22.71.69_wpsapepuat02, hoc_172.25.182.38_connectuat, hoc_172.25.191.139_wpsapepdev01, hoc_172.25.191.140_wpsapepuat01, hoc_172.25.42.96_wpsapeptst01, hoc_172.27.3.207_connectuat, hoc_192.168.98.23_saprp100, hoc_192.168.99.26_saprq300]
+      category: [ any]
+      application: [any]
+      service: [tcp_20443, tcp_443, tcp_80, tcp_1090, tcp_2443, tcp_3200, tcp_3300, tcp_3600, tcp_4700, tcp_4800, tcp_8000, tcp_8443, tcp_9443, tcp_50000, tcp_51001, tcp_8446]
+      action: allow
+      group_profile: spg_au_dc_strict
+      position: 1054
+      log_start: False
+      log_end: True
+      
+    - Operation: 
+      name: Coles_sap_5
+      description: Active Policies added during Coles demerger project - Policy ID 5.4.5.583 on Coles side
+      devicegroup: dg_au_dc_innerfw
+      tag_name: ifw_coles_1
+      rule_type: 
+      source_zone: [ifw_internal_1]
+      source_ip: [gok_Kmart_all]
+      source_user: [any]
+      hip_profiles: [any]
+      destination_zone: [ifw-coles_1]
+      destination_ip: [hoc_172.25.182.24_connecttest, hoc_172.25.182.38_connectuat, hoc_172.25.184.228_connectportal]
+      category: [ any]
+      application: [any]
+      service: [tcp_443, tcp_80, tcp_1090, tcp_2443, tcp_8443, tcp_9443, tcp_2444, tcp_8444, tcp_9444]
+      action: allow
+      group_profile: spg_au_dc_strict
+      position: 1054
+      log_start: False
+      log_end: True
+      
+    - Operation: 
+      name: Coles_secadm
+      description: Active Policies added during Coles demerger project - Policy ID 5.4.5.182 on Coles side
+      devicegroup: dg_au_dc_innerfw
+      tag_name: ifw_coles_1
+      rule_type: 
+      source_zone: [ifw_internal_1, ifw_sslvpn_1]
+      source_ip: [gok_kmart_sslvpnpools, nok_172.31.0.0-16_KmartHO]
+      source_user: [any]
+      hip_profiles: [any]
+      destination_zone: [ifw-coles_1]
+      destination_ip: [hoc_172.22.160.94_lpunixweb03, hoc_172.25.159.99_lpunixweb01]
+      category: [ any]
+      application: [any]
+      service: [tcp_1984, tcp_80]
+      action: allow
+      group_profile: spg_au_dc_strict
+      position: 1054
+      log_start: False
+      log_end: True
+      
+    - Operation: 
+      name: Coles_sql
+      description: Active Policies added during Coles demerger project - Policy ID 5.4.5.584 and 5.4.5.585 on Coles side
+      devicegroup: dg_au_dc_innerfw
+      tag_name: ifw_coles_1
+      rule_type: 
+      source_zone: [ifw_internal_1, ifw_sslvpn_1]
+      source_ip: [gok_kmart_offices, gok_kmart_sslvpnpools]
+      source_user: [any]
+      hip_profiles: [any]
+      destination_zone: [ifw-coles_1]
+      destination_ip: [hoc_172.22.150.128_dpx04db01, hoc_172.22.150.129_dpx04db02, hoc_172.22.150.130_dpx04db03, hoc_172.22.150.131_dpx04db04, hoc_172.22.150.160_ddx02db01, hoc_172.22.150.161_ddx02db02, hoc_172.22.150.162_ddx02db03, hoc_172.22.150.163_ddx02db04, hoc_172.22.160.100_dpx0401-vip, hoc_172.22.160.101_dpx0402-vip, hoc_172.22.160.102_dpx0403-vip, hoc_172.22.160.103_dpx0404-vip, hoc_172.22.160.104_dpx04-scan, hoc_172.22.160.105_dpx04-scan, hoc_172.22.160.106_dpx04-scan, hoc_172.22.160.200_ddx0201-vip, hoc_172.22.160.201_ddx0202-vip, hoc_172.22.160.202_ddx0203-vip, hoc_172.22.160.203_ddx0204-vip, hoc_172.22.160.204_ddx02-scan, hoc_172.22.160.205_ddx02-scan, hoc_172.22.160.206_ddx02-scan, hoc_172.22.150.20_dpx05db01, hoc_172.22.150.21_dpx05db02, hoc_172.22.150.22_dpx05db03, hoc_172.22.150.23_dpx05db04, hoc_172.22.162.68_dpx0501-vip, hoc_172.22.162.69_dpx0502-vip, hoc_172.22.162.70_dpx0503-vip, hoc_172.22.162.71_dpx0504-vip, hoc_172.22.162.72_dpx05-scan, hoc_172.22.162.73_dpx05-scan, hoc_172.22.162.74_dpx05-scan]
+      category: [ any]
+      application: [any]
+      service: [tcp_1521]
+      action: allow
+      group_profile: spg_au_dc_strict
+      position: 1054
+      log_start: False
+      log_end: True
+      
+    - Operation: 
+      name: Coles_struxureware
+      description: Active Policies added during Coles demerger project - Policy ID 5.4.5.590 on Coles side
+      devicegroup: dg_au_dc_innerfw
+      tag_name: ifw_coles_1
+      rule_type: 
+      source_zone: [ifw_internal_1]
+      source_ip: [nok_172.31.0.0-16_KmartHO]
+      source_user: [any]
+      hip_profiles: [any]
+      destination_zone: [ifw-coles_1]
+      destination_ip: [hoc_172.22.161.23_lx-papcops, hoc_172.22.161.72, hoc_172.22.162.61_APCDCO]
+      category: [ any]
+      application: [any]
+      service: [tcp_443, tcp_80, tcp_4457-4462]
+      action: allow
+      group_profile: spg_au_dc_strict
+      position: 1054
+      log_start: False
+      log_end: True
+      
+    - Operation: 
+      name: Coles_sysmanage
+      description: Active Policies added during Coles demerger project - Policy ID 5.4.5.150 on Coles side
+      devicegroup: dg_au_dc_innerfw
+      tag_name: ifw_coles_1
+      rule_type: 
+      source_zone: [ifw_internal_1, ifw_sslvpn_1]
+      source_ip: [gok_kmart_dcs,gok_kmart_offices, gok_kmart_sslvpnpools, gok_core_stores]
+      source_user: [any]
+      hip_profiles: [any]
+      destination_zone: [ifw-coles_1]
+      destination_ip: [grp_sysmanage_servers]
+      category: [ any]
+      application: [any]
+      service: [tcp_135, tcp_139, tcp_445, tcp_80]
+      action: allow
+      group_profile: spg_au_dc_strict
+      position: 1054
+      log_start: False
+      log_end: True
+      
+    - Operation: 
+      name: Coles_tivoli
+      description: Active Policies added during Coles demerger project - Policy ID 5.4.5.165 on Coles side
+      devicegroup: dg_au_dc_innerfw
+      tag_name: ifw_coles_1
+      rule_type: 
+      source_zone: [ifw_internal_1, ifw_sslvpn_1]
+      source_ip: [gok_kmart_dcs,gok_kmart_offices, gok_kmart_sslvpnpools, gok_core_stores]
+      source_user: [any]
+      hip_profiles: [any]
+      destination_zone: [ifw-coles_1]
+      destination_ip: [grp_Coles_Tivoli_Servers, hoc_172.22.31.133_gmpgw10, hoc_172.22.43.27_dsmprd20, hoc_172.22.43.34_uprsprt02, hoc_172.22.43.41_gmpgw20, hoc_172.25.159.73_lpitmrtems4, hoc_172.25.159.74_lpitmrtems1, hoc_172.25.159.79_lpitmrtems6, hoc_172.25.163.224_lpitmrtems5, hoc_172.25.43.35_uprsprt03, hoc_172.25.52.36_tivtest10, hoc_172.25.52.39_torgate10-g0]
+      category: [ any]
+      application: [any]
+      service: [tcp_6969]
+      action: allow
+      group_profile: spg_au_dc_strict
+      position: 1054
+      log_start: False
+      log_end: True
+      
+    - Operation: 
+      name: Coles_websphere
+      description: Active Policies added during Coles demerger project - Policy ID 5.4.5.192 on Coles side
+      devicegroup: dg_au_dc_innerfw
+      tag_name: ifw_coles_1
+      rule_type: 
+      source_zone: [ifw_internal_1, ifw_sslvpn_1]
+      source_ip: [gok_kmart_offices, gok_kmart_sslvpnpools, gok_core_stores, nok_172.31.0.0-16_KmartHO]
+      source_user: [any]
+      hip_profiles: [any]
+      destination_zone: [ifw-coles_1]
+      destination_ip: [hoc_172.25.181.38_utmq1, hoc_172.25.181.40_utmq2, hoc_172.25.181.37_utmq1s, hoc_172.25.181.39_utmq2s]
+      category: [ any]
+      application: [any]
+      service: [tcp_8001, tcp_8002, tcp_8021, tcp_8022]
+      action: allow
+      group_profile: spg_au_dc_strict
+      position: 1054
+      log_start: False
+      log_end: True
+      
+    - Operation: 
+      name: Coles_websphere_1
+      description: Active Policies added during Coles demerger project - Policy ID 5.4.5.151 on Coles side
+      devicegroup: dg_au_dc_innerfw
+      tag_name: ifw_coles_1
+      rule_type: 
+      source_zone: [ifw_internal_1]
+      source_ip: [gok_Kmart_all]
+      source_user: [any]
+      hip_profiles: [any]
+      destination_zone: [ifw-coles_1]
+      destination_ip: [grp_coles_prod_mq]
+      category: [ any]
+      application: [any]
+      service: [tcp_8011]
+      action: allow
+      group_profile: spg_au_dc_strict
+      position: 1054
+      log_start: False
+      log_end: True
+      
+    - Operation: 
+      name: Coles_winservers
+      description: Active Policies added during Coles demerger project - Policy ID 5.4.5.127 on Coles side
+      devicegroup: dg_au_dc_innerfw
+      tag_name: ifw_coles_1
+      rule_type: 
+      source_zone: [ifw_internal_1]
+      source_ip: [gok_Kmart_all]
+      source_user: [any]
+      hip_profiles: [any]
+      destination_zone: [ifw-coles_1]
+      destination_ip: [grp_Windows_Filesystems]
+      category: [ any]
+      application: [any]
+      service: [tcp_443, tcp_80, tcp_7000]
+      action: allow
+      group_profile: spg_au_dc_strict
+      position: 1054
+      log_start: False
+      log_end: True
+      
+    - Operation: 
+      name: Coles_wins
+      description: Active Policies added during Coles demerger project - Policy ID 5.4.5.122 and 5.4.5.123 on Coles side
+      devicegroup: dg_au_dc_innerfw
+      tag_name: ifw_coles_1
+      rule_type: 
+      source_zone: [ifw_internal_1]
+      source_ip: [gok_Kmart_all]
+      source_user: [any]
+      hip_profiles: [any]
+      destination_zone: [ifw-coles_1]
+      destination_ip: [gpc_wins, hoc_172.25.41.99_wpwins09vm]
+      category: [ any]
+      application: [any]
+      service: [udp_69, udp_137, udp_138, tcp_1050, tcp_135, tcp_139, tcp_42, tcp_445]
+      action: allow
+      group_profile: spg_au_dc_strict
+      position: 1054
+      log_start: False
+      log_end: True
+      
+    - Operation: 
+      name: Coles_trm
+      description: Active Policies added during Coles demerger project - Policy ID 5.4.5.193 on Coles side
+      devicegroup: dg_au_dc_innerfw
+      tag_name: ifw_coles_1
+      rule_type: 
+      source_zone: [ifw_internal_1, ifw_sslvpn_1]
+      source_ip: [gok_kmart_dcs,gok_kmart_offices, gok_kmart_sslvpnpools, gok_core_stores]
+      source_user: [any]
+      hip_profiles: [any]
+      destination_zone: [ifw-coles_1]
+      destination_ip: [grp_TRM_servers, hoc_172.25.184.151_mercuryam-sys-new, hoc_172.25.184.154_wfctrm21, hoc_172.25.71.36_trm-fllweb-22]
+      category: [ any]
+      application: [any]
+      service: [tcp_80]
+      action: allow
+      group_profile: spg_au_dc_strict
+      position: 1054
+      log_start: False
+      log_end: True
+      
+    - Operation: 
+      name: Coles_eai
+      description: Active Policies added during Coles demerger project - Policy ID 5.4.5.619 on Coles side
+      devicegroup: dg_au_dc_innerfw
+      tag_name: ifw_coles_1
+      rule_type: 
+      source_zone: [ifw_internal_1]
+      source_ip: [nok_172.31.0.0-16_KmartHO]
+      source_user: [any]
+      hip_profiles: [any]
+      destination_zone: [ifw-coles_1]
+      destination_ip: [hoc_172.27.34.7_prods-eailog]
+      category: [ any]
+      application: [any]
+      service: [tcp_80]
+      action: allow
+      group_profile: spg_au_dc_strict
+      position: 1054
+      log_start: False
+      log_end: True
+      
