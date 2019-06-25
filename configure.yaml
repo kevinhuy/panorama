@@ -92,13 +92,13 @@
     #   include_tasks: tasks/createservicegroup-task.yaml
     #   tags: configure, servicegroups
 
-    # - name: Configure security Policy - post rule if any
-    #   include_tasks: tasks/createpolicy-postrule-task.yaml
-    #   tags: configure, securitypolicy
-
-    - name: Configure security Policy - pre rule if any
-      include_tasks: tasks/createpolicy-prerule-task.yaml
+    - name: Configure security Policy - post rule if any
+      include_tasks: tasks/createpolicy-postrule-task.yaml
       tags: configure, securitypolicy
+
+    # - name: Configure security Policy - pre rule if any
+    #   include_tasks: tasks/createpolicy-prerule-task.yaml
+    #   tags: configure, securitypolicy
 
     # - name: Commit changes to the device
     #   include_tasks: tasks/commit-task.yaml

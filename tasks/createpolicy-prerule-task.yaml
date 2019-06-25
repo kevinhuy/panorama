@@ -31,4 +31,3 @@
     existing_rule: "{{ item.existing_rule }}"
   when: prerule != None
   with_items: "{{ prerule }}"
-  

@@ -13,7 +13,7 @@ policy:
       hip_profiles: [{{ entry.HIPProfile }}]
       destination_zone: [{{ entry.DestinationZone }}]
       destination_ip: [{{ entry.DestinationIP }}]
-      url_filtering: [ {{ entry.URLCategory }}]
+      category: [ {{ entry.URLCategory }}]
       application: [{{ entry.Application }}]
       service: [{{ entry.Service }}]
       action: {{ entry.Action }}

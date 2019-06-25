@@ -12,7 +12,7 @@ policy:
       hip_profiles: [test, test2]
       destination_zone: [ifw_interbrand_1]
       destination_ip: [any]
-      url_filtering: [ any]
+      category: [ adult]
       application: [any]
       service: [any]
       action: allow

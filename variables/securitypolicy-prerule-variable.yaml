@@ -1,6 +1,6 @@
 prerule:
 
-    - Operation: update
+    - Operation: 
       name: test added by Ansible
       description: test
       devicegroup: Test
@@ -18,8 +18,8 @@ prerule:
       action: allow
       group_profile: spg_au_dc_strict
       disabled: yes
-      location: before
-      existing_rule: Deny
+      location: top
+      existing_rule: 
       log_start: True
       log_end: True
       log_setting: lf_au_dc_panorama

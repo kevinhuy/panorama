@@ -19,7 +19,7 @@
     hip_profiles: "{{ item.hip_profiles }}"
     destination_zone: "{{ item.destination_zone }}"
     destination_ip: "{{ item.destination_ip }}"
-    url_filtering: "{{ item.url_filtering }}"
+    category: "{{ item.category }}"
     service: "{{ item.service }}"
     application: "{{ item.application }}"
     action: "{{ item.action }}"
