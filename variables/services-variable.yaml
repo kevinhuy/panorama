@@ -5,19 +5,19 @@ services:
       port: 444
       devicegroup: Test
       description: Test
-      operation: delete
+      operation: add
 
     - name: udp_555
       protocol: udp
       port: 555
       devicegroup: Test
       description: Test
-      operation: delete
+      operation: add
 
     - name: tcp_9999
       protocol: tcp
       port: 9999
       devicegroup: Test
       description: Test
-      operation: delete
+      operation: add
 

@@ -1,6 +1,6 @@
-policy:
+prerule:
 
-    - Operation: add
+    - Operation: update
       name: test added by Ansible
       description: test
       devicegroup: Test
@@ -12,11 +12,14 @@ policy:
       hip_profiles: [test, test2]
       destination_zone: [ifw_interbrand_1]
       destination_ip: [any]
-      url_filtering: [ any]
+      category: [ any]
       application: [any]
       service: [any]
       action: allow
       group_profile: spg_au_dc_strict
-      position: 0
+      disabled: yes
+      location: before
+      existing_rule: Deny
       log_start: True
-      log_end: False
+      log_end: True
+      log_setting: lf_au_dc_panorama

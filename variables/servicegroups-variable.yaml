@@ -4,11 +4,11 @@ servicesgroups:
       members: [tcp_444, udp_555]
       devicegroup: Test
       description: test
-      operation: delete
+      operation: add
 
     - name: service_group2
       members: [tcp_9999]
       devicegroup: Test
       description: test
-      operation: delete
+      operation: add
 
