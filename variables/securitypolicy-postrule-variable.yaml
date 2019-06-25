@@ -1,22 +1,22 @@
 policy:
 
     - Operation: add
-      name: test added by Ansible
-      description: test
-      devicegroup: Test
+      name: Coles_windows_ldap
+      description: Active Policies added during Coles demerger project - Policy ID 5.4.5.130, 5.4.5.131, 5.4.5.132, 5.4.5.133 on Coles side
+      devicegroup: dg_au_dc_innerfw
       tag_name: ifw_coles_1
       rule_type: interzone
       source_zone: [ifw_internal_1]
-      source_ip: [any]
-      source_user: [test1]
-      hip_profiles: [test, test2]
-      destination_zone: [ifw_interbrand_1]
-      destination_ip: [any]
-      category: [ adult]
+      source_ip: [gok_Kmart_all]
+      source_user: [any]
+      hip_profiles: [any]
+      destination_zone: [ifw-coles_1]
+      destination_ip: [goc_windows_servers_ldap]
+      category: [ any]
       application: [any]
-      service: [any]
+      service: [tcp_464, udp_123, udp_389, udp_464, udp_636, udp_88, udp_138, tcp_135, tcp_139, tcp_3268, tcp_445, tcp_88]
       action: allow
       group_profile: spg_au_dc_strict
-      position: 0
-      log_start: True
-      log_end: False
+      position: 1054
+      log_start: False
+      log_end: True

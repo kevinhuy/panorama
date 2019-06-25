@@ -30,41 +30,41 @@
     #     msg: "{{ configxls }}"
     #   tags: xls_to_facts, debug
 
-    - name: Create YAML variables file for network addresses from XLS | template
-      template:
-        src: templates/networkadd.j2
-        dest: variables/networkaddress-variable.yaml
-      tags: template, networkaddress
+    # - name: Create YAML variables file for network addresses from XLS | template
+    #   template:
+    #     src: templates/networkadd.j2
+    #     dest: variables/networkaddress-variable.yaml
+    #   tags: template, networkaddress
 
-    - name: Create YAML variables file for network groups from XLS | template
-      template:
-        src: templates/networkgroup.j2
-        dest: variables/networkgroup-variable.yaml
-      tags: template, networkgroup
+    # - name: Create YAML variables file for network groups from XLS | template
+    #   template:
+    #     src: templates/networkgroup.j2
+    #     dest: variables/networkgroup-variable.yaml
+    #   tags: template, networkgroup
 
-    - name: Create YAML variables file for services from XLS | template
-      template:
-        src: templates/services.j2
-        dest: variables/services-variable.yaml
-      tags: template, services
+    # - name: Create YAML variables file for services from XLS | template
+    #   template:
+    #     src: templates/services.j2
+    #     dest: variables/services-variable.yaml
+    #   tags: template, services
 
-    - name: Create YAML variables file for service groups from XLS | template
-      template:
-        src: templates/servicegroups.j2
-        dest: variables/servicegroups-variable.yaml
-      tags: template, servicegroups
+    # - name: Create YAML variables file for service groups from XLS | template
+    #   template:
+    #     src: templates/servicegroups.j2
+    #     dest: variables/servicegroups-variable.yaml
+    #   tags: template, servicegroups
 
-    - name: Create YAML variables file for service policy - post rules from XLS | template
-      template:
-        src: templates/securitypolicy-postrule.j2
-        dest: variables/securitypolicy-postrule-variable.yaml
-      tags: template, securitypolicy
+    # - name: Create YAML variables file for service policy - post rules from XLS | template
+    #   template:
+    #     src: templates/securitypolicy-postrule.j2
+    #     dest: variables/securitypolicy-postrule-variable.yaml
+    #   tags: template, securitypolicy
 
-    - name: Create YAML variables file for service policy - pre rules from XLS | template
-      template:
-        src: templates/securitypolicy-prerule.j2
-        dest: variables/securitypolicy-prerule-variable.yaml
-    #
+    # - name: Create YAML variables file for service policy - pre rules from XLS | template
+    #   template:
+    #     src: templates/securitypolicy-prerule.j2
+    #     dest: variables/securitypolicy-prerule-variable.yaml
+    
     # - name: Panos check
     #   panos_check:
     #     ip_address: "{{ ip_address }}"
@@ -76,9 +76,15 @@
     #   debug:
     #     msg: "{{ check }}"
     #
-    # - name: Create Network Addresses
-    #   include_tasks: tasks/createnetworkaddresses-task.yaml
-    #   tags: configure, networkaddress
+    - name: Import's netowrk Object yaml file
+      include_vars:
+        file: variables/networkaddress-variable.yaml
+
+    - name: Create Network Addresses
+      include_tasks: tasks/createnetworkaddresses-task.yaml
+      when: networkadd != None
+      with_items: "{{ netwrokadd }}"
+      tags: configure, networkaddress
 
     # - name: Create Network Groups
     #   include_tasks: tasks/createnetworkgroup-task.yaml
@@ -92,8 +98,14 @@
     #   include_tasks: tasks/createservicegroup-task.yaml
     #   tags: configure, servicegroups
 
+    - name: Import the variables necessart to add security policies
+      include_vars:
+        file: variables/securitypolicy-postrule-variable.yaml
+
     - name: Configure security Policy - post rule if any
       include_tasks: tasks/createpolicy-postrule-task.yaml
+      when: policy  != None
+      with_items: "{{ policy }}"
       tags: configure, securitypolicy
 
     # - name: Configure security Policy - pre rule if any

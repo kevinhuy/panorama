@@ -1,7 +1,3 @@
-- name: Import the variables necessart to add security policies
-  include_vars:
-    file: variables/securitypolicy-postrule-variable.yaml
-
 - name: create security policy - post rule
   panos_security_rule_post:
     ip_address: "{{ ip_address }}"
@@ -29,5 +25,8 @@
     is_post_rule: True
     position: "{{ item.position }}"
     commit: "False"
-  when: policy  != None
-  with_items: "{{ policy }}"
+  register: result
+
+- name: 
+  debug:
+    msg: "{{ item.name }} {{ result.changed }}"

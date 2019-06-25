@@ -13,9 +13,9 @@
     description: "{{ item.description }}"
     devicegroup: "{{ item.devicegroup }}"
     operation: "{{ item.operation }}"
-  with_items: "{{ networkadd }}"
   when: item.addressgroupip.find('-') == -1
   ignore_errors: true
+  register: result
 
 - name: Configure Network address when it is a range
   panos_object:
@@ -28,6 +28,10 @@
     description: "{{ item.description }}"
     devicegroup: "{{ item.devicegroup }}"
     operation: "{{ item.operation }}"
-  with_items: "{{ networkadd }}"
   when: item.addressgroupip.find('-') != -1
   ignore_errors: true
+  register: result
+
+- name: 
+  debug:
+    msg: "{{ item.name }} {{ result.changed }}"
