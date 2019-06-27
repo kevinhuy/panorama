@@ -1,4 +1,0 @@
-Object creation failed with message: Object 'hoc_test' already exists. Use operation: 'update' to change it.
-Object creation failed with message: Object 'hoc_test2' already exists. Use operation: 'update' to change it.
-Object creation failed with message: Object 'hoc_test3' already exists. Use operation: 'update' to change it.
-Object creation was successful with message: Object 'hoc_test4' successfully added

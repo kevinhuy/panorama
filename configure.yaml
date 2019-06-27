@@ -79,6 +79,7 @@
     - name: Import file containing the network addresses to be created
       include_vars:
         file: variables/networkaddress-variable.yaml
+      tags: import, networkaddress
 
     - name: Create Network Addresses
       include_tasks: tasks/createnetworkaddresses-task.yaml
@@ -88,14 +89,13 @@
       with_items: "{{ networkadd }}"
       tags: configure, networkaddress
 
-    - name: Create Network Addresses when the address is a range
-      include_tasks: tasks/createnetwrokaddresses-range-task.yaml
-      when: 
-        - networkadd != None
-        - item.addressgroupip.find('-') != -1
-      with_items: "{{ networkadd }}"
-      tags: configure, networkaddress
-
+    # - name: Create Network Addresses when the address is a range
+    #   include_tasks: tasks/createnetwrokaddresses-range-task.yaml
+    #   when: 
+    #     - networkadd != None
+    #     - item.addressgroupip.find('-') != -1
+    #   with_items: "{{ networkadd }}"
+    #   tags: configure, networkaddress
 
     # - name: Include the networkgroup.yaml file
     #   include_vars:

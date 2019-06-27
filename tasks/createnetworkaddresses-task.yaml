@@ -14,14 +14,14 @@
 
 - name: Log the result when successful
   lineinfile:
-    path: logs/networkaddresses.txt
+    path: logs/networkaddresses-log.csv
     create: yes
-    line: "Object creation failed with message: {{ result.msg }}"
+    line: "Failed, {{ result.msg }}"
   when: result.failed == true
 
 - name: Log the result when failure
   lineinfile:
-    path: logs/networkaddresses.txt
+    path: logs/networkaddresses-log.txt
     create: yes
-    line: "Object creation was successful with message: {{ result.msg }}"
+    line: "Successful, {{ result.msg }}"
   when: result.failed == false

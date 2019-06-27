@@ -1,4 +1,0 @@
-Object creation failed with message: Object 'tcp_464' already exists. Use operation: 'update' to change it.
-Object creation failed with message: Object 'udp_123' already exists. Use operation: 'update' to change it.
-Object creation failed with message: Object 'tcp_3333' already exists. Use operation: 'update' to change it.
-Object creation was successful with message: Object 'tcp_4444' successfully added

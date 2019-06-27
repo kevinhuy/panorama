@@ -9,3 +9,18 @@
     devicegroup: "{{ item.devicegroup }}"
     operation: "{{ item.operation }}"
   ignore_errors: true
+  register: result
+
+- name: Log when successful
+  lineinfile:
+    path: logs/networkgroups-log.csv
+    create: yes
+    line: "Failed, {{ result.msg }}"
+  when: result.failed == true
+
+- name: Log when failed
+  lineinfile:
+    path: logs/networkgroups-log.csv
+    create: yes
+    line: "Successful, {{ result.msg }}"
+  when: result.failed == false
