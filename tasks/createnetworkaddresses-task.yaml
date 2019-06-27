@@ -9,21 +9,19 @@
     description: "{{ item.description }}"
     devicegroup: "{{ item.devicegroup }}"
     operation: "{{ item.operation }}"
-  when: item.addressgroupip.find('-') == -1
-  with_items: "{{ networkadd }}"
   ignore_errors: true
+  register: result
 
-- name: Configure Network address when it is a range
-  panos_object:
-    ip_address: "{{ ip_address }}"
-    username: "{{ username }}"
-    password: "{{ password }}"
-    addressobject: "{{ item.addressgroupname }}"
-    address: "{{ item.addressgroupip }}"
-    address_type: "ip-range"
-    description: "{{ item.description }}"
-    devicegroup: "{{ item.devicegroup }}"
-    operation: "{{ item.operation }}"
-  when: item.addressgroupip.find('-') != -1
-  with_items: "{{ networkadd }}"
-  ignore_errors: true
+- name: Log the result when successful
+  lineinfile:
+    path: logs/networkaddresses.txt
+    create: yes
+    line: "Object creation failed with message: {{ result.msg }}"
+  when: result.failed == true
+
+- name: Log the result when failure
+  lineinfile:
+    path: logs/networkaddresses.txt
+    create: yes
+    line: "Object creation was successful with message: {{ result.msg }}"
+  when: result.failed == false

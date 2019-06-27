@@ -21,7 +21,7 @@
 
     - name: Import XLS and convert to yaml facts | xls_to_facts
       xls_to_facts:
-        src: variables/configuration.xlsx
+        src: variables/{{ source }}.xlsx
       register: configxls
       tags: xls_to_facts
 
@@ -82,8 +82,20 @@
 
     - name: Create Network Addresses
       include_tasks: tasks/createnetworkaddresses-task.yaml
-      when: networkadd != None
+      when: 
+        - networkadd != None
+        - item.addressgroupip.find('-') == -1
+      with_items: "{{ networkadd }}"
       tags: configure, networkaddress
+
+    - name: Create Network Addresses when the address is a range
+      include_tasks: tasks/createnetwrokaddresses-range-task.yaml
+      when: 
+        - networkadd != None
+        - item.addressgroupip.find('-') != -1
+      with_items: "{{ networkadd }}"
+      tags: configure, networkaddress
+
 
     # - name: Include the networkgroup.yaml file
     #   include_vars:
@@ -95,8 +107,14 @@
     #   with_items: "{{ networkgroup }}"
     #   tags: configure, networkobjects
 
+    # - name: Import's service-variables yaml file
+    #   include_vars:
+    #     file: variables/services-variable.yaml
+
     # - name: Create services objects
     #   include_tasks: tasks/createserviceobjects-task.yaml
+    #   when: services != none
+    #   with_items: "{{ services }}"
     #   tags: configure, services
 
     # - name: Create service groups

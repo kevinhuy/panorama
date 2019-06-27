@@ -1,32 +1,27 @@
-- name: create service Objects
+- name: Configure Network address when it is a range
   panos_object:
-    ip_address : "{{ ip_address }}"
+    ip_address: "{{ ip_address }}"
     username: "{{ username }}"
     password: "{{ password }}"
-    serviceobject: "{{ item.name }}"
-    protocol: "{{ item.protocol }}"
-    destination_port : "{{ item.port }}"
+    addressobject: "{{ item.addressgroupname }}"
+    address: "{{ item.addressgroupip }}"
+    address_type: "ip-range"
     description: "{{ item.description }}"
     devicegroup: "{{ item.devicegroup }}"
     operation: "{{ item.operation }}"
   ignore_errors: true
   register: result
 
-- name: Log to file
+- name: Log the result when successful
   lineinfile:
-    path: logs/serviceobjects-log.txt
+    path: logs/networkaddresses.txt
     create: yes
     line: "Object creation failed with message: {{ result.msg }}"
   when: result.failed == true
 
-- name: Log to file
+- name: Log the result when failure
   lineinfile:
-    path: logs/serviceobjects-log.txt
+    path: logs/networkaddresses.txt
     create: yes
     line: "Object creation was successful with message: {{ result.msg }}"
   when: result.failed == false
-
-
-# - name:
-#   debug:
-#     msg: "{{ result }}"
