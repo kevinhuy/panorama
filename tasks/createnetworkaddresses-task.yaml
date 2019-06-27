@@ -1,7 +1,3 @@
-- name: Import's netowrk Object yaml file
-  include_vars:
-    file: variables/networkaddress-variable.yaml
-
 - name: Configure Network address when it is not a range
   panos_object:
     ip_address: "{{ ip_address }}"
@@ -14,8 +10,8 @@
     devicegroup: "{{ item.devicegroup }}"
     operation: "{{ item.operation }}"
   when: item.addressgroupip.find('-') == -1
+  with_items: "{{ networkadd }}"
   ignore_errors: true
-  register: result
 
 - name: Configure Network address when it is a range
   panos_object:
@@ -29,9 +25,5 @@
     devicegroup: "{{ item.devicegroup }}"
     operation: "{{ item.operation }}"
   when: item.addressgroupip.find('-') != -1
+  with_items: "{{ networkadd }}"
   ignore_errors: true
-  register: result
-
-- name: 
-  debug:
-    msg: "{{ result }}"
