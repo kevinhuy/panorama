@@ -14,14 +14,14 @@
 
 - name: Log to file
   lineinfile:
-    path: logs/serviceobjects-log.txt
+    path: logs/serviceobjects-log.csv
     create: yes
     line: "Failed, {{ result.msg }}"
   when: result.failed == true
 
 - name: Log to file
   lineinfile:
-    path: logs/serviceobjects-log.txt
+    path: logs/serviceobjects-log.csv
     create: yes
     line: "Successful, {{ result.msg }}"
   when: result.failed == false

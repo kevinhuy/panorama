@@ -1,7 +1,3 @@
-- name: Import service-variables yaml file
-  include_vars:
-    file: variables/servicegroups-variable.yaml
-
 - name: create service Objects
   panos_object:
     ip_address : "{{ ip_address }}"
@@ -12,5 +8,21 @@
     description: "{{ item.description }}"
     devicegroup: "{{ item.devicegroup }}"
     operation: "{{ item.operation }}"
-  with_items: "{{ servicesgroups }}"
+  register: result
   ignore_errors: true
+
+- name: Log when failed
+  lineinfile:
+    path: logs/servicegroups-log.csv
+    create: yes
+    line: "Failed, {{ result.msg }}"
+  when: result.failed == true
+
+- name: Log when successful
+  lineinfile:
+    path: logs/servicegroups-log.csv
+    create: yes
+    line: "Successful, {{ result.msg }}"
+  when: result.failed == false
+
+

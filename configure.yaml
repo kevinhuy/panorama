@@ -30,29 +30,17 @@
     #     msg: "{{ configxls }}"
     #   tags: xls_to_facts, debug
 
-    - name: Create YAML variables file for network addresses from XLS | template
-      template:
-        src: templates/networkadd.j2
-        dest: variables/networkaddress-variable.yaml
-      tags: template, networkaddress
+    # - name: Create YAML variables file for services from XLS | template
+    #   template:
+    #     src: templates/services.j2
+    #     dest: variables/services-variable.yaml
+    #   tags: template, services
 
-    - name: Create YAML variables file for network groups from XLS | template
-      template:
-        src: templates/networkgroup.j2
-        dest: variables/networkgroup-variable.yaml
-      tags: template, networkgroup
-
-    - name: Create YAML variables file for services from XLS | template
-      template:
-        src: templates/services.j2
-        dest: variables/services-variable.yaml
-      tags: template, services
-
-    - name: Create YAML variables file for service groups from XLS | template
-      template:
-        src: templates/servicegroups.j2
-        dest: variables/servicegroups-variable.yaml
-      tags: template, servicegroups
+    # - name: Create YAML variables file for service groups from XLS | template
+    #   template:
+    #     src: templates/servicegroups.j2
+    #     dest: variables/servicegroups-variable.yaml
+    #   tags: template, servicegroups
 
     - name: Create YAML variables file for service policy - post rules from XLS | template
       template:
@@ -75,51 +63,16 @@
     # - name: output check
     #   debug:
     #     msg: "{{ check }}"
-    #
-    - name: Import file containing the network addresses to be created
-      include_vars:
-        file: variables/networkaddress-variable.yaml
-      tags: import, networkaddress
 
-    - name: Create Network Addresses
-      include_tasks: tasks/createnetworkaddresses-task.yaml
-      when: 
-        - networkadd != None
-        - item.addressgroupip.find('-') == -1
-      with_items: "{{ networkadd }}"
-      tags: configure, networkaddress
+    - name: Create services objects
+      include_tasks: tasks/createserviceobjects-task.yaml
+      when: services != none
+      with_items: "{{ services }}"
+      tags: configure, services
 
-    # - name: Create Network Addresses when the address is a range
-    #   include_tasks: tasks/createnetwrokaddresses-range-task.yaml
-    #   when: 
-    #     - networkadd != None
-    #     - item.addressgroupip.find('-') != -1
-    #   with_items: "{{ networkadd }}"
-    #   tags: configure, networkaddress
-
-    # - name: Include the networkgroup.yaml file
-    #   include_vars:
-    #     file: variables/networkgroup-variable.yaml
-
-    # - name: Create Network Groups
-    #   include_tasks: tasks/createnetworkgroup-task.yaml
-    #   when: networkgroup != None
-    #   with_items: "{{ networkgroup }}"
-    #   tags: configure, networkobjects
-
-    # - name: Import's service-variables yaml file
-    #   include_vars:
-    #     file: variables/services-variable.yaml
-
-    # - name: Create services objects
-    #   include_tasks: tasks/createserviceobjects-task.yaml
-    #   when: services != none
-    #   with_items: "{{ services }}"
-    #   tags: configure, services
-
-    # - name: Create service groups
-    #   include_tasks: tasks/createservicegroup-task.yaml
-    #   tags: configure, servicegroups
+    - name: Create service groups
+      include_tasks: tasks/createservicegroup-task.yaml
+      tags: configure, servicegroups
 
     # - name: Import the variables necessart to add security policies
     #   include_vars:

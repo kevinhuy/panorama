@@ -1,0 +1,37 @@
+Successful, Object 'hoc_172.22.71.31_eds_test' successfully added
+Failed, Object 'hoc_192.168.96.52_TMS_Prod' already exists. Use operation: 'update' to change it.
+Failed, Object 'hoc_172.22.150.128_dpx04db01' already exists. Use operation: 'update' to change it.
+Successful, Object 'hoc_172.22.150.129_dpx04db02' successfully added
+Successful, Object 'hoc_172.22.150.130_dpx04db03' successfully added
+Successful, Object 'hoc_172.22.150.131_dpx04db04' successfully added
+Successful, Object 'hoc_172.22.150.160_ddx02db01' successfully added
+Successful, Object 'hoc_172.22.150.161_ddx02db02' successfully added
+Successful, Object 'hoc_172.22.150.162_ddx02db03' successfully added
+Successful, Object 'hoc_172.22.150.163_ddx02db04' successfully added
+Successful, Object 'hoc_172.22.150.20_dpx05db01' successfully added
+Successful, Object 'hoc_172.22.150.21_dpx05db02' successfully added
+Successful, Object 'hoc_172.22.150.22_dpx05db03' successfully added
+Successful, Object 'hoc_172.22.150.23_dpx05db04' successfully added
+Successful, Object 'hoc_172.22.160.100_dpx0401-vip' successfully added
+Successful, Object 'hoc_172.22.160.101_dpx0402-vip' successfully added
+Successful, Object 'hoc_172.22.160.102_dpx0403-vip' successfully added
+Successful, Object 'hoc_172.22.160.103_dpx0404-vip' successfully added
+Failed, Object 'hoc_172.22.160.104_dpx04-scan' already exists. Use operation: 'update' to change it.
+Failed, Object 'hoc_172.22.160.105_dpx04-scan' already exists. Use operation: 'update' to change it.
+Failed, Object 'hoc_172.22.160.106_dpx04-scan' already exists. Use operation: 'update' to change it.
+Successful, Object 'hoc_172.22.160.200_ddx0201-vip' successfully added
+Successful, Object 'hoc_172.22.160.201_ddx0202-vip' successfully added
+Successful, Object 'hoc_172.22.160.202_ddx0203-vip' successfully added
+Successful, Object 'hoc_172.22.160.203_ddx0204-vip' successfully added
+Successful, Object 'hoc_172.22.160.204_ddx02-scan' successfully added
+Successful, Object 'hoc_172.22.160.205_ddx02-scan' successfully added
+Successful, Object 'hoc_172.22.160.206_ddx02-scan' successfully added
+Successful, Object 'hoc_172.22.160.46_udixos1' successfully added
+Successful, Object 'hoc_172.22.160.47_utsap1' successfully added
+Successful, Object 'hoc_172.22.160.49_sh0301ec' successfully added
+Successful, Object 'hoc_172.22.160.94_lpunixweb03' successfully added
+Successful, Object 'hoc_172.22.161.23_lx-papcops' successfully added
+Successful, Object 'hoc_172.22.161.72' successfully added
+Successful, Object 'hoc_172.22.162.61_APCDCO' successfully added
+Failed, Object 'hoc_172.22.162.68_dpx0501-vip' already exists. Use operation: 'update' to change it.
+Failed, Object 'hoc_172.22.71.31_eds_test' already exists. Use operation: 'update' to change it.

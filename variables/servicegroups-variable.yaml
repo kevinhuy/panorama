@@ -1,8 +1,20 @@
 servicesgroups:
 
-    - name: 
-      members: []
-      devicegroup: 
+    - name: test_1
+      members: [tcp_464,tcp_80]
+      devicegroup: dg_au_dc_innerfw
       description: 
-      operation: 
+      operation: add
+
+    - name: test_1
+      members: [tcp_464,tcp_80]
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: test_3
+      members: [tcp_80, tcp_65535]
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
 

@@ -14,17 +14,654 @@ services:
       description: 
       operation: add
 
-    - name: tcp_3333
-      protocol: tcp
-      port: 3333
+    - name: udp_389
+      protocol: udp
+      port: 389
       devicegroup: dg_au_dc_innerfw
       description: 
       operation: add
 
-    - name: tcp_4444
-      protocol: tcp
-      port: 4444
+    - name: udp_464
+      protocol: udp
+      port: 464
       devicegroup: dg_au_dc_innerfw
       description: 
-      operation: add 
+      operation: add
+
+    - name: udp_636
+      protocol: udp
+      port: 636
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: udp_88
+      protocol: udp
+      port: 88
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: udp_138
+      protocol: udp
+      port: 138
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_135
+      protocol: tcp
+      port: 135
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_139
+      protocol: tcp
+      port: 139
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_3268
+      protocol: tcp
+      port: 3268
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_445
+      protocol: tcp
+      port: 445
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_88
+      protocol: tcp
+      port: 88
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_123
+      protocol: tcp
+      port: 123
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_137
+      protocol: tcp
+      port: 137
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_3269
+      protocol: tcp
+      port: 3269
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_389
+      protocol: tcp
+      port: 389
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_53
+      protocol: tcp
+      port: 53
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_636
+      protocol: tcp
+      port: 636
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_9389
+      protocol: tcp
+      port: 9389
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_24158
+      protocol: tcp
+      port: 24158
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: udp_137
+      protocol: udp
+      port: 137
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: udp_53
+      protocol: udp
+      port: 53
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: udp_445
+      protocol: udp
+      port: 445
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_1025
+      protocol: tcp
+      port: 1025
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_59001
+      protocol: tcp
+      port: 59001
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_80
+      protocol: tcp
+      port: 80
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_21
+      protocol: tcp
+      port: 21
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: udp_4011
+      protocol: udp
+      port: 4011
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: udp_69
+      protocol: udp
+      port: 69
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: udp_67
+      protocol: udp
+      port: 67
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: udp_68
+      protocol: udp
+      port: 68
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_443
+      protocol: tcp
+      port: 443
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_7443
+      protocol: tcp
+      port: 7443
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_9443
+      protocol: tcp
+      port: 9443
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_1433
+      protocol: tcp
+      port: 1433
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_2107
+      protocol: tcp
+      port: 2107
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_2953
+      protocol: tcp
+      port: 2953
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_2954
+      protocol: tcp
+      port: 2954
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_3443
+      protocol: tcp
+      port: 3443
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_7510
+      protocol: tcp
+      port: 7510
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: udp_162
+      protocol: udp
+      port: 162
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_7000
+      protocol: tcp
+      port: 7000
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_25
+      protocol: tcp
+      port: 25
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_22
+      protocol: tcp
+      port: 22
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_23
+      protocol: tcp
+      port: 23
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_3389
+      protocol: tcp
+      port: 3389
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_8080
+      protocol: tcp
+      port: 8080
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_5510
+      protocol: tcp
+      port: 5510
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_5522
+      protocol: tcp
+      port: 5522
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_3000-5000
+      protocol: tcp
+      port: 3000-5000
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_3241
+      protocol: tcp
+      port: 3241
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_3243
+      protocol: tcp
+      port: 3243
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_3641
+      protocol: tcp
+      port: 3641
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_3643
+      protocol: tcp
+      port: 3643
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_3612
+      protocol: tcp
+      port: 3612
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_3201
+      protocol: tcp
+      port: 3201
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_3202
+      protocol: tcp
+      port: 3202
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_3203
+      protocol: tcp
+      port: 3203
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_3211
+      protocol: tcp
+      port: 3211
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_3212
+      protocol: tcp
+      port: 3212
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_3222
+      protocol: tcp
+      port: 3222
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_3232
+      protocol: tcp
+      port: 3232
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_3242
+      protocol: tcp
+      port: 3242
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_3601
+      protocol: tcp
+      port: 3601
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_3602
+      protocol: tcp
+      port: 3602
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_3603
+      protocol: tcp
+      port: 3603
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_3622
+      protocol: tcp
+      port: 3622
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_3642
+      protocol: tcp
+      port: 3642
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_8022
+      protocol: tcp
+      port: 8022
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_20443
+      protocol: tcp
+      port: 20443
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_1090
+      protocol: tcp
+      port: 1090
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_2443
+      protocol: tcp
+      port: 2443
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_3200
+      protocol: tcp
+      port: 3200
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_3300
+      protocol: tcp
+      port: 3300
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_3600
+      protocol: tcp
+      port: 3600
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_4700
+      protocol: tcp
+      port: 4700
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_4800
+      protocol: tcp
+      port: 4800
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_8000
+      protocol: tcp
+      port: 8000
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_8443
+      protocol: tcp
+      port: 8443
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_50000
+      protocol: tcp
+      port: 50000
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_51001
+      protocol: tcp
+      port: 51001
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_8446
+      protocol: tcp
+      port: 8446
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_2444
+      protocol: tcp
+      port: 2444
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_8444
+      protocol: tcp
+      port: 8444
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_9444
+      protocol: tcp
+      port: 9444
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_1984
+      protocol: tcp
+      port: 1984
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_1521
+      protocol: tcp
+      port: 1521
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_4457-4462
+      protocol: tcp
+      port: 4457-4462
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_6969
+      protocol: tcp
+      port: 6969
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_8001
+      protocol: tcp
+      port: 8001
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_8002
+      protocol: tcp
+      port: 8002
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_8021
+      protocol: tcp
+      port: 8021
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_8011
+      protocol: tcp
+      port: 8011
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_1050
+      protocol: tcp
+      port: 1050
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
+
+    - name: tcp_42
+      protocol: tcp
+      port: 42
+      devicegroup: dg_au_dc_innerfw
+      description: 
+      operation: add
 

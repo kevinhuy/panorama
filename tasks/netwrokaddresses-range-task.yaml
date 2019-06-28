@@ -12,16 +12,16 @@
   ignore_errors: true
   register: result
 
-- name: Log the result when successful
+- name: Log the result when Failed
   lineinfile:
-    path: logs/networkaddresses.txt
+    path: logs/networkaddresses.csv
     create: yes
     line: "Failed, {{ result.msg }}"
   when: result.failed == true
 
-- name: Log the result when failure
+- name: Log the result when Successful
   lineinfile:
-    path: logs/networkaddresses.txt
+    path: logs/networkaddresses.csv
     create: yes
     line: "Successful, {{ result.msg }}"
   when: result.failed == false

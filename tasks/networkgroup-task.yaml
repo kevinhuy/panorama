@@ -11,14 +11,14 @@
   ignore_errors: true
   register: result
 
-- name: Log when successful
+- name: Log when failed
   lineinfile:
     path: logs/networkgroups-log.csv
     create: yes
     line: "Failed, {{ result.msg }}"
   when: result.failed == true
 
-- name: Log when failed
+- name: Log when successful
   lineinfile:
     path: logs/networkgroups-log.csv
     create: yes

@@ -1,0 +1,57 @@
+---
+- name: ansible-playbook to configure service objects to Panorama
+  hosts: localhost
+  gather_facts: false
+  connection: local
+
+  roles:
+    - role: PaloAltoNetworks.paloaltonetworks
+
+  tasks:
+  - name: Import file containing the login details and source file
+    include_vars:
+      file: secrets.yaml
+
+  - name: Import Source file and convert to json
+    xls_to_facts:
+      src: variables/{{ source }}.xlsx
+    register: configxls
+
+  - name: Populate service objects to be configured to yaml file
+    template:
+      src: templates/services.j2
+      dest: variables/services-variable.yaml
+    tags: template, service
+
+  - name: Populate service group objects to be configured to yaml file
+    template:
+      src: templates/servicegroups.j2
+      dest: variables/servicegroups-variable.yaml
+    tags: template, servicegroups
+
+  - name: Import service objects variable file
+    include_vars:
+      file: variables/services-variable.yaml
+    tags: import, service
+
+  - name: Import service group object variable file
+    include_vars:
+      file: variables/servicegroups-variable.yaml
+    tags: import, servicegroups
+
+  # - name: configure service objects
+  #   include_tasks: tasks/serviceobjects-task.yaml
+  #   when: services != none
+  #   with_items: "{{ services }}"
+  #   tags: configure, service
+
+  - name: configure service group objects
+    include_tasks: tasks/servicegroup-task.yaml
+    when: servicesgroups != none
+    with_items: "{{ servicesgroups }}"
+    tags: configure, servicegroups
+...
+
+
+
+  
