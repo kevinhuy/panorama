@@ -1,0 +1,5 @@
+Successful, test added by Ansible, Done
+Failed, test added by Ansible, Unsupported parameters for (panos_security_rule) module: device_group Supported parameters include: action, antivirus, api_key, application, category, commit, data_filtering, description, destination_ip, destination_zone, devicegroup, disable_server_response_inspection, disabled, existing_rule, file_blocking, group_profile, hip_profiles, icmp_unreachable, ip_address, location, log_end, log_setting, log_start, negate_destination, negate_source, negate_target, operation, password, rule_name, rule_type, rulebase, schedule, service, source_ip, source_user, source_zone, spyware, state, tag_name, target, url_filtering, username, vsys, vulnerability, wildfire_analysis
+Failed, test added by Ansible, value of location must be one of: top, bottom, before, after, got: dg_au_dc_innerfw
+Failed, test added by Ansible, Failed "present" apply:  test added by Ansible -> tag ' test' is not a valid reference
+ test added by Ansible -> tag is invalid

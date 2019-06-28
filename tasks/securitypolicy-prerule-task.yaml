@@ -1,9 +1,10 @@
-- name: create security policy - post rule
-  panos_security_rule_post:
+
+- name: Configure Pre-rules
+  panos_security_rule:
     ip_address: "{{ ip_address }}"
     username: "{{ username }}"
     password: "{{ password }}"
-    operation: "{{ item.Operation }}"
+    state: "{{ item.Operation }}"
     rule_name: "{{ item.name }}"
     description: "{{ item.description }}"
     devicegroup: "{{ item.devicegroup }}"
@@ -19,14 +20,26 @@
     service: "{{ item.service }}"
     application: "{{ item.application }}"
     action: "{{ item.action }}"
+    group_profile: "{{ item.group_profile }}"
     log_start: "{{ item.log_start }}"
     log_end: "{{ item.log_end }}"
-    group_profile: "{{ item.group_profile }}"
-    is_post_rule: True
-    position: "{{ item.position }}"
-    commit: "False"
+    log_setting: "{{ item.log_setting }}"
+    location: "{{ item.location }}"
+    # existing_rule: "{{ item.existing_rule }}"
+    commit: false
+  ignore_errors: yes
   register: result
 
-- name: 
-  debug:
-    msg: "{{ item.name }} {{ result.changed }}"
+- name: Log the result when failed
+  lineinfile:
+    path: logs/securitypolicy-prerules.csv
+    create: yes
+    line: "Failed, {{ item.name }}, {{ result.msg }}"
+  when: result.failed == true
+
+- name: Log the result when successful
+  lineinfile:
+    path: logs/securitypolicy-prerules.csv
+    create: yes
+    line: "Successful, {{ item.name }}, {{ result.msg }}"
+  when: result.failed == false

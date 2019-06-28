@@ -1,0 +1,33 @@
+---
+- name: ansible-playbook to configure security policy pre-rules on panorama
+  hosts: localhost
+  gather_facts: false
+  connection: local
+
+  roles:
+    - role: PaloAltoNetworks.paloaltonetworks
+
+  tasks:
+  - name: Import file containing the login details and source file
+    include_vars:
+      file: secrets.yaml
+
+  - name: Import Source file and convert to json
+    xls_to_facts:
+      src: variables/{{ source }}.xlsx
+    register: configxls
+  
+  - name: populate pre-rule to be configured to yaml file
+    template: 
+      src: templates/securitypolicy-prerule.j2
+      dest: variables/securitypolicy-prerule-variable.yaml
+
+  - name: import pre-rules variable file
+    include_vars:
+      file: variables/securitypolicy-prerule-variable.yaml
+
+  - name: configure pre-rules on panorama
+    include_tasks: tasks/securitypolicy-prerule-task.yaml
+    when: prerule != none
+    with_items: "{{ prerule }}"
+    tags: configure, prerule

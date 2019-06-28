@@ -1,15 +1,15 @@
 prerule:
 
-    - Operation: 
+    - Operation: present
       name: test added by Ansible
       description: test
-      devicegroup: Test
-      tag_name: ifw_coles_1
+      devicegroup: dg_au_dc_innerfw
+      tag_name: ifw_coles_1, test
       rule_type: interzone
       source_zone: [ifw_internal_1]
       source_ip: [any]
-      source_user: [test1]
-      hip_profiles: [test, test2]
+      source_user: [any]
+      hip_profiles: [any]
       destination_zone: [ifw_interbrand_1]
       destination_ip: [any]
       category: [ any]

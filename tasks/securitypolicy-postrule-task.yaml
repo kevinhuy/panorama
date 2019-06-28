@@ -1,16 +1,12 @@
-- name: Import the variables necessart to add security policies - Pre Rules
-  include_vars:
-    file: variables/securitypolicy-prerule-variable.yaml
-
-- name: Configure Pre-rules
-  panos_security_rule:
+- name: create security policy - post rule
+  panos_security_rule_post:
     ip_address: "{{ ip_address }}"
     username: "{{ username }}"
     password: "{{ password }}"
-    state: present
+    operation: "{{ item.Operation }}"
     rule_name: "{{ item.name }}"
     description: "{{ item.description }}"
-    device_group: "{{ item.devicegroup }}"
+    devicegroup: "{{ item.devicegroup }}"
     tag_name: "{{ item.tag_name }}"
     rule_type: "{{ item.rule_type }}"
     source_zone: "{{ item.source_zone }}"
@@ -23,11 +19,25 @@
     service: "{{ item.service }}"
     application: "{{ item.application }}"
     action: "{{ item.action }}"
-    group_profile: "{{ item.group_profile }}"
     log_start: "{{ item.log_start }}"
     log_end: "{{ item.log_end }}"
-    log_setting: "{{ item.log_setting }}"
-    location: "{{ item.location }}"
-    existing_rule: "{{ item.existing_rule }}"
-  when: prerule != None
-  with_items: "{{ prerule }}"
+    group_profile: "{{ item.group_profile }}"
+    is_post_rule: True
+    position: "{{ item.position }}"
+    commit: "False"
+  ignore_errors: yes
+  register: result
+
+- name: Log the result when failed
+  lineinfile:
+    path: logs/securitypolicy-postrules.csv
+    create: yes
+    line: "Failed, {{ result.msg }}"
+  when: result.failed == true
+
+- name: Log the result when successful
+  lineinfile:
+    path: logs/securitypolicy-postrules.csv
+    create: yes
+    line: "Successful, {{ result.msg }}"
+  when: result.failed == false

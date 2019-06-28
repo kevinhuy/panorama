@@ -1,0 +1,3 @@
+Failed,  post-rulebase -> security -> rules -> Coles_windows_ldap -> tag 'ifw_coles_1' is not a valid reference
+ post-rulebase -> security -> rules -> Coles_windows_ldap -> tag is invalid
+Successful, Rule 'Coles_windows_ldap' successfully added
