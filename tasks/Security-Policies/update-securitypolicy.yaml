@@ -1,13 +1,13 @@
-
-- name: Configure Pre-rules
+- name: Update Security policy
   panos_security_rule:
     ip_address: "{{ ip_address }}"
     username: "{{ username }}"
     password: "{{ password }}"
-    state: "{{ item.Operation }}"
+    state: present
     rule_name: "{{ item.name }}"
     description: "{{ item.description }}"
-    devicegroup: "{{ item.devicegroup }}"
+    device_group: "{{ item.device_group }}"
+    rulebase: "{{ item.rulebase }}"
     tag_name: "{{ item.tag_name }}"
     rule_type: "{{ item.rule_type }}"
     source_zone: "{{ item.source_zone }}"
@@ -21,25 +21,28 @@
     application: "{{ item.application }}"
     action: "{{ item.action }}"
     group_profile: "{{ item.group_profile }}"
+    disabled: "{{ item.disabled }}"
+    location: "{{ item.location }}"
+  # existing_rule: "{{ item.existing_rule }}"
     log_start: "{{ item.log_start }}"
     log_end: "{{ item.log_end }}"
     log_setting: "{{ item.log_setting }}"
-    location: "{{ item.location }}"
-    # existing_rule: "{{ item.existing_rule }}"
     commit: false
   ignore_errors: yes
   register: result
 
 - name: Log the result when failed
   lineinfile:
-    path: logs/securitypolicy-prerules.csv
+    path: logs/securitypolicy.csv
     create: yes
-    line: "Failed, {{ item.name }}, {{ result.msg }}"
-  when: result.failed == true
+    line: "{{ item.name }}, Failed, {{ item.name }}, {{ result.msg }}"
+  when: 
+  - result.failed == true
 
 - name: Log the result when successful
   lineinfile:
-    path: logs/securitypolicy-prerules.csv
+    path: logs/securitypolicy.csv
     create: yes
-    line: "Successful, {{ item.name }}, {{ result.msg }}"
-  when: result.failed == false
+    line: "{{ item.name }}, Successful, {{ item.name }}, {{ result.msg }}"
+  when: 
+    - result.failed == false

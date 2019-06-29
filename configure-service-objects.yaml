@@ -39,14 +39,14 @@
       file: variables/servicegroups-variable.yaml
     tags: import, servicegroups
 
-  # - name: configure service objects
-  #   include_tasks: tasks/serviceobjects-task.yaml
-  #   when: services != none
-  #   with_items: "{{ services }}"
-  #   tags: configure, service
+  - name: configure service objects
+    include_tasks: tasks/Service-Objects/objects.yaml
+    when: services != none
+    with_items: "{{ services }}"
+    tags: configure, service
 
   - name: configure service group objects
-    include_tasks: tasks/servicegroup-task.yaml
+    include_tasks: tasks/Service-Objects/group.yaml
     when: servicesgroups != none
     with_items: "{{ servicesgroups }}"
     tags: configure, servicegroups

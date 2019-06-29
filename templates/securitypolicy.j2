@@ -1,10 +1,11 @@
-prerule:
+securitypolicy:
 
-{% for entry in configxls.ansible_facts.spreadsheet_FirewallPolicies_prerule %}
-    - Operation: {{ entry.Operation }}
+{% for entry in configxls.ansible_facts.spreadsheet_FirewallPolicies %}
+    - operation: {{ entry.Operation }}
       name: {{ entry.Name }}
       description: {{ entry.Description }}
-      devicegroup: {{ entry.Devicegroup }}
+      device_group: {{ entry.Devicegroup }}
+      rulebase: {{ entry.RuleBase }}-rulebase
       tag_name: {{ entry.Tags }}
       rule_type: {{ entry.Type }}
       source_zone: [{{ entry.SourceZone }}]
@@ -14,8 +15,8 @@ prerule:
       destination_zone: [{{ entry.DestinationZone }}]
       destination_ip: [{{ entry.DestinationIP }}]
       category: [ {{ entry.URLCategory }}]
-      application: [{{ entry.Application }}]
       service: [{{ entry.Service }}]
+      application: [{{ entry.Application }}]
       action: {{ entry.Action }}
       group_profile: {{ entry.SecurityProfile }}
       disabled: {{ entry.Disabled }}

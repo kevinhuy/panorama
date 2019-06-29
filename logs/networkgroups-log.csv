@@ -1,1 +1,2 @@
-Successful, Object 'test_1' successfully added
+Failed, Object 'group_1' already exists. Use operation: 'update' to change it.
+Failed, Object 'group_2' already exists. Use operation: 'update' to change it.

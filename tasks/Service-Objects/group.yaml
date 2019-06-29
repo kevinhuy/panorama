@@ -15,14 +15,14 @@
   lineinfile:
     path: logs/servicegroups-log.csv
     create: yes
-    line: "Failed, {{ result.msg }}"
+    line: "{{ item.name }}, Failed, {{ result.msg }}"
   when: result.failed == true
 
 - name: Log when successful
   lineinfile:
     path: logs/servicegroups-log.csv
     create: yes
-    line: "Successful, {{ result.msg }}"
+    line: "{{ item.name }}, Successful, {{ result.msg }}"
   when: result.failed == false
 
 

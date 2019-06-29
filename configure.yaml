@@ -1,56 +1,27 @@
 ---
-- name: Play to push configuration to panorama
+- name:
   hosts: localhost
   gather_facts: false
   connection: local
+  vars:
+    provider:
+      ip_address: "192.168.1.250"
+      username: "admin"
+      password: "admin"
 
   roles:
     - role: PaloAltoNetworks.paloaltonetworks
 
   tasks:
-
-    - name: Import Secrets file | File Import
-      include_vars:
-        file: secrets.yaml
-      tags: include
-
-    # - name: Import policy attributes like security profile, position rule type and log settings | File Import
-    #   include_vars:
-    #     file: attributes.yaml
-    #   tags: include
-
-    - name: Import XLS and convert to yaml facts | xls_to_facts
-      xls_to_facts:
-        src: variables/{{ source }}.xlsx
-      register: configxls
-      tags: xls_to_facts
-
-    # - name: Print variables
-    #   debug:
-    #     msg: "{{ configxls }}"
-    #   tags: xls_to_facts, debug
-
-    - name: Create YAML variables file for service policy - pre rules from XLS | template
-      template:
-        src: templates/securitypolicy-prerule.j2
-        dest: variables/securitypolicy-prerule-variable.yaml
+  
+    - name: check
+      panos_security_rule_facts:
+        provider: "{{ provider }}"
+        device_group: "dg_au_dc_innerfw"
+        rulebase: "post-rulebase"
+      register: result
     
-    # - name: Panos check
-    #   panos_check:
-    #     ip_address: "{{ ip_address }}"
-    #     username: "{{ username }}"
-    #     password: "{{ password }}"
-    #   register: check
-    #
-    # - name: output check
-    #   debug:
-    #     msg: "{{ check }}"
+    - debug:
+        msg: "{{ result.rules }}"
 
-    # - name: Configure security Policy - pre rule if any
-    #   include_tasks: tasks/createpolicy-prerule-task.yaml
-    #   tags: configure, securitypolicy
-
-    # - name: Commit changes to the device
-    #   include_tasks: tasks/commit-task.yaml
-    #   tags: commit
-...
+ 
