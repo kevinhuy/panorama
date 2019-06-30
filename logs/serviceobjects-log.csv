@@ -1,0 +1,126 @@
+
+tcp_464, Failed, Object 'tcp_464' already exists. Use operation: 'update' to change it.
+udp_123, Failed, Object 'udp_123' already exists. Use operation: 'update' to change it.
+udp_389, Failed, Object 'udp_389' already exists. Use operation: 'update' to change it.
+udp_464, Failed, Object 'udp_464' already exists. Use operation: 'update' to change it.
+udp_636, Failed, Object 'udp_636' already exists. Use operation: 'update' to change it.
+udp_88, Failed, Object 'udp_88' already exists. Use operation: 'update' to change it.
+udp_138, Failed, Object 'udp_138' already exists. Use operation: 'update' to change it.
+tcp_135, Failed, Object 'tcp_135' already exists. Use operation: 'update' to change it.
+tcp_139, Failed, Object 'tcp_139' already exists. Use operation: 'update' to change it.
+tcp_3268, Failed, Object 'tcp_3268' already exists. Use operation: 'update' to change it.
+tcp_445, Failed, Object 'tcp_445' already exists. Use operation: 'update' to change it.
+tcp_88, Failed, Object 'tcp_88' already exists. Use operation: 'update' to change it.
+tcp_123, Successful, Object 'tcp_123' successfully added
+tcp_137, Failed, Object 'tcp_137' already exists. Use operation: 'update' to change it.
+tcp_3269, Failed, Object 'tcp_3269' already exists. Use operation: 'update' to change it.
+tcp_389, Failed, Object 'tcp_389' already exists. Use operation: 'update' to change it.
+tcp_53, Failed, Object 'tcp_53' already exists. Use operation: 'update' to change it.
+tcp_636, Failed, Object 'tcp_636' already exists. Use operation: 'update' to change it.
+tcp_9389, Failed, Object 'tcp_9389' already exists. Use operation: 'update' to change it.
+tcp_24158, Successful, Object 'tcp_24158' successfully added
+udp_137, Successful, Object 'udp_137' successfully added
+udp_53, Failed, Object 'udp_53' already exists. Use operation: 'update' to change it.
+udp_445, Failed, Object 'udp_445' already exists. Use operation: 'update' to change it.
+tcp_1025, Failed, Object 'tcp_1025' already exists. Use operation: 'update' to change it.
+tcp_59001, Failed, Object 'tcp_59001' already exists. Use operation: 'update' to change it.
+tcp_80, Failed, Object 'tcp_80' already exists. Use operation: 'update' to change it.
+tcp_21, Failed, Object 'tcp_21' already exists. Use operation: 'update' to change it.
+udp_4011, Failed, Object 'udp_4011' already exists. Use operation: 'update' to change it.
+udp_69, Successful, Object 'udp_69' successfully added
+udp_67, Failed, Object 'udp_67' already exists. Use operation: 'update' to change it.
+udp_68, Successful, Object 'udp_68' successfully added
+tcp_443, Failed, Object 'tcp_443' already exists. Use operation: 'update' to change it.
+tcp_7443, Failed, Object 'tcp_7443' already exists. Use operation: 'update' to change it.
+tcp_9443, Failed, Object 'tcp_9443' already exists. Use operation: 'update' to change it.
+tcp_1433, Failed, Object 'tcp_1433' already exists. Use operation: 'update' to change it.
+tcp_2107, Failed, Object 'tcp_2107' already exists. Use operation: 'update' to change it.
+tcp_2953, Successful, Object 'tcp_2953' successfully added
+tcp_2954, Successful, Object 'tcp_2954' successfully added
+tcp_3443, Successful, Object 'tcp_3443' successfully added
+tcp_7510, Successful, Object 'tcp_7510' successfully added
+udp_162, Failed, Object 'udp_162' already exists. Use operation: 'update' to change it.
+tcp_7000, Failed, Object 'tcp_7000' already exists. Use operation: 'update' to change it.
+tcp_25, Failed, Object 'tcp_25' already exists. Use operation: 'update' to change it.
+tcp_22, Failed, Object 'tcp_22' already exists. Use operation: 'update' to change it.
+tcp_23, Failed, Object 'tcp_23' already exists. Use operation: 'update' to change it.
+tcp_3389, Failed, Object 'tcp_3389' already exists. Use operation: 'update' to change it.
+tcp_8080, Failed, Object 'tcp_8080' already exists. Use operation: 'update' to change it.
+tcp_5510, Failed, Object 'tcp_5510' already exists. Use operation: 'update' to change it.
+tcp_5522, Failed, Object 'tcp_5522' already exists. Use operation: 'update' to change it.
+tcp_3000-5000, Failed, Object 'tcp_3000-5000' already exists. Use operation: 'update' to change it.
+tcp_3241, Successful, Object 'tcp_3241' successfully added
+tcp_3243, Successful, Object 'tcp_3243' successfully added
+tcp_3641, Successful, Object 'tcp_3641' successfully added
+tcp_3643, Successful, Object 'tcp_3643' successfully added
+tcp_3612, Successful, Object 'tcp_3612' successfully added
+tcp_3201, Successful, Object 'tcp_3201' successfully added
+tcp_3202, Successful, Object 'tcp_3202' successfully added
+tcp_3203, Successful, Object 'tcp_3203' successfully added
+tcp_3211, Successful, Object 'tcp_3211' successfully added
+tcp_3212, Failed, Object 'tcp_3212' already exists. Use operation: 'update' to change it.
+tcp_3222, Failed, Object 'tcp_3222' already exists. Use operation: 'update' to change it.
+tcp_3232, Failed, Object 'tcp_3232' already exists. Use operation: 'update' to change it.
+tcp_3242, Failed, Object 'tcp_3242' already exists. Use operation: 'update' to change it.
+tcp_3601, Successful, Object 'tcp_3601' successfully added
+tcp_3602, Failed, Object 'tcp_3602' already exists. Use operation: 'update' to change it.
+tcp_3603, Successful, Object 'tcp_3603' successfully added
+tcp_3622, Successful, Object 'tcp_3622' successfully added
+tcp_3642, Failed, Object 'tcp_3642' already exists. Use operation: 'update' to change it.
+tcp_8022, Failed, Object 'tcp_8022' already exists. Use operation: 'update' to change it.
+tcp_20443, Successful, Object 'tcp_20443' successfully added
+tcp_1090, Failed, Object 'tcp_1090' already exists. Use operation: 'update' to change it.
+tcp_2443, Failed, Object 'tcp_2443' already exists. Use operation: 'update' to change it.
+tcp_3200, Failed, Object 'tcp_3200' already exists. Use operation: 'update' to change it.
+tcp_3300, Failed, Object 'tcp_3300' already exists. Use operation: 'update' to change it.
+tcp_3600, Successful, Object 'tcp_3600' successfully added
+tcp_4700, Successful, Object 'tcp_4700' successfully added
+tcp_4800, Successful, Object 'tcp_4800' successfully added
+tcp_8000, Failed, Object 'tcp_8000' already exists. Use operation: 'update' to change it.
+tcp_8443, Failed, Object 'tcp_8443' already exists. Use operation: 'update' to change it.
+tcp_50000, Failed, Object 'tcp_50000' already exists. Use operation: 'update' to change it.
+tcp_51001, Successful, Object 'tcp_51001' successfully added
+tcp_8446, Successful, Object 'tcp_8446' successfully added
+tcp_2444, Successful, Object 'tcp_2444' successfully added
+tcp_8444, Failed, Object 'tcp_8444' already exists. Use operation: 'update' to change it.
+tcp_9444, Failed, Object 'tcp_9444' already exists. Use operation: 'update' to change it.
+tcp_1984, Successful, Object 'tcp_1984' successfully added
+tcp_1521, Failed, Object 'tcp_1521' already exists. Use operation: 'update' to change it.
+tcp_4457-4462, Successful, Object 'tcp_4457-4462' successfully added
+tcp_6969, Failed, Object 'tcp_6969' already exists. Use operation: 'update' to change it.
+tcp_8001, Failed, Object 'tcp_8001' already exists. Use operation: 'update' to change it.
+tcp_8002, Failed, Object 'tcp_8002' already exists. Use operation: 'update' to change it.
+tcp_123, Failed, Object 'tcp_123' already exists. Use operation: 'update' to change it.
+tcp_24158, Failed, Object 'tcp_24158' already exists. Use operation: 'update' to change it.
+udp_137, Failed, Object 'udp_137' already exists. Use operation: 'update' to change it.
+udp_69, Failed, Object 'udp_69' already exists. Use operation: 'update' to change it.
+udp_68, Failed, Object 'udp_68' already exists. Use operation: 'update' to change it.
+tcp_2953, Failed, Object 'tcp_2953' already exists. Use operation: 'update' to change it.
+tcp_2954, Failed, Object 'tcp_2954' already exists. Use operation: 'update' to change it.
+tcp_3443, Failed, Object 'tcp_3443' already exists. Use operation: 'update' to change it.
+tcp_7510, Failed, Object 'tcp_7510' already exists. Use operation: 'update' to change it.
+tcp_3241, Failed, Object 'tcp_3241' already exists. Use operation: 'update' to change it.
+tcp_3243, Failed, Object 'tcp_3243' already exists. Use operation: 'update' to change it.
+tcp_3641, Failed, Object 'tcp_3641' already exists. Use operation: 'update' to change it.
+tcp_3643, Failed, Object 'tcp_3643' already exists. Use operation: 'update' to change it.
+tcp_3612, Failed, Object 'tcp_3612' already exists. Use operation: 'update' to change it.
+tcp_3201, Failed, Object 'tcp_3201' already exists. Use operation: 'update' to change it.
+tcp_3202, Failed, Object 'tcp_3202' already exists. Use operation: 'update' to change it.
+tcp_3203, Failed, Object 'tcp_3203' already exists. Use operation: 'update' to change it.
+tcp_3211, Failed, Object 'tcp_3211' already exists. Use operation: 'update' to change it.
+tcp_3601, Failed, Object 'tcp_3601' already exists. Use operation: 'update' to change it.
+tcp_3603, Failed, Object 'tcp_3603' already exists. Use operation: 'update' to change it.
+tcp_3622, Failed, Object 'tcp_3622' already exists. Use operation: 'update' to change it.
+tcp_20443, Failed, Object 'tcp_20443' already exists. Use operation: 'update' to change it.
+tcp_3600, Failed, Object 'tcp_3600' already exists. Use operation: 'update' to change it.
+tcp_4700, Failed, Object 'tcp_4700' already exists. Use operation: 'update' to change it.
+tcp_4800, Failed, Object 'tcp_4800' already exists. Use operation: 'update' to change it.
+tcp_51001, Failed, Object 'tcp_51001' already exists. Use operation: 'update' to change it.
+tcp_8446, Failed, Object 'tcp_8446' already exists. Use operation: 'update' to change it.
+tcp_2444, Failed, Object 'tcp_2444' already exists. Use operation: 'update' to change it.
+tcp_1984, Failed, Object 'tcp_1984' already exists. Use operation: 'update' to change it.
+tcp_4457-4462, Failed, Object 'tcp_4457-4462' already exists. Use operation: 'update' to change it.
+tcp_8021, Failed, Object 'tcp_8021' already exists. Use operation: 'update' to change it.
+tcp_8011, Failed, Object 'tcp_8011' already exists. Use operation: 'update' to change it.
+tcp_1050, Failed, Object 'tcp_1050' already exists. Use operation: 'update' to change it.
+tcp_42, Failed, Object 'tcp_42' already exists. Use operation: 'update' to change it.

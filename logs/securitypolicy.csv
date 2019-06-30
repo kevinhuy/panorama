@@ -1,2 +1,33 @@
-
 Coles_windows_ldap, Failed, Rule name 'Coles_windows_ldap' already present. Use operation: 'update' to change it.
+Coles_active_directory, Failed, Rule name 'Coles_active_directory' already present. Use operation: 'update' to change it.
+Coles_CMLCONNECT_1, Failed, Failed create:  Coles_CMLCONNECT_1 -> destination 'hoc_172.25.163.216_scripts.CMLCONNECT.ORG hoc_172.25.184.226_portal_cmlconnect_org' is not an allowed keyword
+Coles_CMLCONNECT_2, Failed, Rule name 'Coles_CMLCONNECT_2' already present. Use operation: 'update' to change it.
+Coles_dial_time_gateway, Failed, Rule name 'Coles_dial_time_gateway' already present. Use operation: 'update' to change it.
+Coles_DNS, Failed, Rule name 'Coles_DNS' already present. Use operation: 'update' to change it.
+Coles_HP_NNM, Failed, Rule name 'Coles_HP_NNM' already present. Use operation: 'update' to change it.
+Coles_idm, Failed, Rule name 'Coles_idm' already present. Use operation: 'update' to change it.
+Coles_INGENICO_TMS, Failed, Failed create:  Coles_INGENICO_TMS -> destination 'hoc_192.168.96.52_TMS_Prod hoc_192.168.241.87_Ingenico_Kidman' is not an allowed keyword
+Coles_management, Failed, Rule name 'Coles_management' already present. Use operation: 'update' to change it.
+Coles_netdev, Failed, Rule name 'Coles_netdev' already present. Use operation: 'update' to change it.
+Coles_ntp, Failed, Rule name 'Coles_ntp' already present. Use operation: 'update' to change it.
+Coles_owa, Failed, Rule name 'Coles_owa' already present. Use operation: 'update' to change it.
+Coles_proxy, Failed, Rule name 'Coles_proxy' already present. Use operation: 'update' to change it.
+Coles_pwdreset_svr, Failed, Rule name 'Coles_pwdreset_svr' already present. Use operation: 'update' to change it.
+Coles_ent_tech, Failed, Failed create:  Coles_ent_tech -> destination 'gpc_qet_servers' is not an allowed keyword
+Coles_sap, Successful,Done
+Coles_sap_1, Successful,Done
+Coles_sap_2, Successful,Done
+Coles_sap_3, Failed, Failed create:  Coles_sap_3 -> destination 'del_172.22.61.243_utsap1' is not an allowed keyword
+Coles_sap_4, Successful,Done
+Coles_sap_5, Successful,Done
+Coles_secadm, Successful,Done
+Coles_sql, Successful,Done
+Coles_struxureware, Successful,Done
+Coles_sysmanage, Failed, Failed create:  Coles_sysmanage -> destination 'grp_sysmanage_servers' is not an allowed keyword
+Coles_tivoli, Failed, Failed create:  Coles_tivoli -> destination 'grp_Coles_Tivoli_Servers' is not an allowed keyword
+Coles_websphere, Successful,Done
+Coles_websphere_1, Failed, Failed create:  Coles_websphere_1 -> destination 'grp_coles_prod_mq' is not an allowed keyword
+Coles_winservers, Failed, Failed create:  Coles_winservers -> destination 'grp_Windows_Filesystems' is not an allowed keyword
+Coles_wins, Failed, Failed create:  Coles_wins -> destination 'gpc_wins' is not an allowed keyword
+Coles_trm, Failed, Failed create:  Coles_trm -> destination 'grp_TRM_servers' is not an allowed keyword
+Coles_eai, Successful,Done

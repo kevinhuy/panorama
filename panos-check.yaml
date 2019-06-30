@@ -1,0 +1,30 @@
+---
+- name: ansible-playbook to check connectivity to panorama
+  hosts: localhost
+  gather_facts: true
+  connection: local
+
+  roles:
+    - role: PaloAltoNetworks.paloaltonetworks
+
+  tasks:
+  - name: Import file containing the login details and source file
+    include_vars:
+      file: secrets.yaml
+
+  - name: Check connectivity to panorama
+    panos_check:
+      ip_address: "{{ ip_address }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+    register: result
+    ignore_errors: yes
+
+  - debug:
+      msg: "Connectivity check to panorama was successful. Happy Configuring!!"
+    when: result.failed == false
+
+  - debug:
+      msg: "Connectivity check to panorama Failed with message {{ result.msg }}.
+            Re-confirm ip-address, username and passowrd in secrets.yaml file"
+    when: result.failed == true
