@@ -17,17 +17,17 @@
       src: variables/{{ source }}.xlsx
     register: configxls
 
-  # - name: Populate Network Objects to be configured to yaml file
-  #   template:
-  #     src: templates/networkadd.j2
-  #     dest: variables/networkaddress-variable.yaml
-  #   tags: template, networkaddress
+  - name: Populate Network Objects to be configured to yaml file
+    template:
+      src: templates/networkadd.j2
+      dest: variables/networkaddress-variable.yaml
+    tags: template, networkaddress
 
-  # - name: Populate Network Group Objects to be configured to yaml file
-  #   template:
-  #     src: templates/networkgroup.j2
-  #     dest: variables/networkgroup-variable.yaml
-  #   tags: template, networkgroup
+  - name: Populate Network Group Objects to be configured to yaml file
+    template:
+      src: templates/networkgroup.j2
+      dest: variables/networkgroup-variable.yaml
+    tags: template, networkgroup
 
   - name: Import Network Objects variables file
     include_vars:
@@ -39,21 +39,21 @@
       file: variables/networkgroup-variable.yaml
     tags: import, networkgroups
 
-  # - name: Configure network addresses
-  #   include_tasks: tasks/Network-Objects/address.yaml
-  #   when:
-  #     - networkadd != none
-  #     - item.addressgroupip.find('-') == -1
-  #   with_items: "{{ networkadd }}"
-  #   tags: configure, networkaddress
+  - name: Configure network addresses
+    include_tasks: tasks/Network-Objects/address.yaml
+    when:
+      - networkadd != none
+      - item.addressgroupip.find('-') == -1
+    with_items: "{{ networkadd }}"
+    tags: configure, networkaddress
 
-  # - name: Configure network ranges
-  #   include_tasks: tasks/Network-Objects/address-range.yaml
-  #   when:
-  #   - networkadd != None
-  #   - item.addressgroupip.find('-') != -1
-  #   with_items: "{{ networkadd }}"
-  #   tags: configure, networkaddress
+  - name: Configure network ranges
+    include_tasks: tasks/Network-Objects/address-range.yaml
+    when:
+    - networkadd != None
+    - item.addressgroupip.find('-') != -1
+    with_items: "{{ networkadd }}"
+    tags: configure, networkaddress
 
   - name: Configure network groups
     include_tasks: tasks/Network-Objects/groups.yaml
