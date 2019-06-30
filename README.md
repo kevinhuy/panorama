@@ -12,17 +12,7 @@ This playbook takes a .xlsx file as input to configure network objects, service 
     ```
     ansible-galaxy install PaloAltoNetworks.paloaltonetworks,v2.2.2 --force
     ```
-3. [xls_to_facts.py](https://raw.githubusercontent.com/mamullen13316/ansible_xls_to_facts/master/xls_to_facts.py) needs to be copied onto ansible/module/files/ as this module is not shipped with ansible.  
-4. Due to the limitation of the current module to add a post rule, We will need to download one of the [old-modules](https://raw.githubusercontent.com/PaloAltoNetworks/ansible-pan/f7cf604ab3c9c6eb2cab8f4fcc1653cb67251cee/library/panos_security_rule.py)
-    This file needs to be placed in the libraries folder of the galaxy role.  
-    Path to your galaxy role can be found by executing  
-    ```
-    ansible-galaxy info PaloAltoNetworks.paloaltonetworks | grep path
-    ```
-    Navigate to the library folder and execute the below command  
-    ```
-    wget --output-document=panos_security_rule_post.py https://raw.githubusercontent.com/PaloAltoNetworks/ansible-pan/f7cf604ab3c9c6eb2cab8f4fcc1653cb67251cee/library/panos_security_rule.py
-    ```
+3. [xls_to_facts.py](https://raw.githubusercontent.com/mamullen13316/ansible_xls_to_facts/master/xls_to_facts.py) needs to be copied onto ansible/module/files/ as this module is not shipped with ansible.
     
 
 # Files
@@ -33,7 +23,7 @@ This playbook takes a .xlsx file as input to configure network objects, service 
 ### Input file [configuration.xlsx](https://gitlab.com/Sudarshan_K/panorama/blob/master/variables/configuration.xlsx)
 Below are formats to follow when populating the input file.
 1. Filename, Sheetnames and column names **can not** change.
-2. FirewallPolicies_postrules Sheet - Defines the Post rules. Refer to the [metadata] file for details.
+2. FirewallPolicies - Defines the security policies that are to be configured.
 2. NetworkObjects - Defined the Network Objects. Refer to the [metadata] file for details.
 3. NetworkGroup Sheet - Defines the Network Objects. Objects can be a list or a single value but needs to be in single quotes (') eg:- 'member1','member2' or 'member1'
 
