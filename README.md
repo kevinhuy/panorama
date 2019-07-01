@@ -34,27 +34,27 @@ Below are formats to follow when populating the input file.
 # Playbooks
 Execute the Playbook in the below order to ensure all dependencies are met to configure Security Policies.
 
-### panos-check.yaml
+##### panos-check.yaml
 Checks the connection of the script server to Panorama instance, executed by command
 ```
 ansible-playbook /path/to/file/panos-check.yaml
 ```
 
-### configure-network-objects.yaml
+##### configure-network-objects.yaml
 Configures the Network objects and Network Group Objects, executed by command  
 ```
 ansible-playbook /path/to/file/configure-network-objects.yaml
 ```
 Execution logs are written to logs/networkaddresses-log.csv and logs/networkobjects-log.csv
 
-### configure-service-objects.yaml
+##### configure-service-objects.yaml
 Configures the Service objects and Service Group Objects, executed by command  
 ```
 ansible-playbook /path/to/file/configure-service-objects.yaml
 ```
 Execution logs are written to logs/serviceobjects-log.csv and logs/servicegroups-log.csv
 
-### configure-security-policy.yaml
+##### configure-security-policy.yaml
 Configured the security-policy.yaml, executed by command  
 ```
 ansible-playbook /path/to/file/configure-security-policy.yaml
@@ -62,7 +62,7 @@ ansible-playbook /path/to/file/configure-security-policy.yaml
 Execution logs are written to logs/securitypolicy.csv
 
 
-## Author
+### Author
 Sudarshan Vijaya Kumar
 
 ---
