@@ -17,11 +17,11 @@ This playbook takes a .xlsx file as input to configure network objects, service 
 
 # Files
 
-[secrets.yaml](https://gitlab.com/Sudarshan_K/panorama/raw/master/secrets.yaml) contains the **ip address** of the panorama, the **login credientials** and the source **file name**.   
+[secrets.yaml](https://gitlab.com/Sudarshan_K/panorama/raw/master/secrets.yaml) contains the **ip address** of the panorama, the **login credientials** and the **source file** name.   
 
-### Source file - **Needs to be in the variables folder** [sample-sourcefile.xlsx] ()
+### Source file - Needs to be in the variables folder [sample-sourcefile.xlsx] (https://gitlab.com/Sudarshan_K/panorama/blob/master/variables/sample-sourcefile.xlsx)
 Below are formats to follow when populating the input file.
-1. Filename, Sheetnames and column names **can not** change.
+1. Filename, Sheetnames and column names **can-not** change.
 2. FirewallPolicies - Defines the security policies that are to be configured.
 2. NetworkObjects - Defined the Network Objects.
 3. NetworkGroup Sheet - Defines the Network Objects. Objects can be a list or a single value but needs to be in single quotes (') eg:- 'member1','member2' or 'member1'
