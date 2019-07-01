@@ -17,26 +17,49 @@ This playbook takes a .xlsx file as input to configure network objects, service 
 
 # Files
 
-[secrets.yaml](https://gitlab.com/Sudarshan_K/panorama/raw/master/secrets.yaml) contains the ip address of the panorama and the login credientials.  
-[configuration.xlsx](https://gitlab.com/Sudarshan_K/panorama/blob/master/variables/configuration.xlsx) is the input file with the policy information.    
+[secrets.yaml](https://gitlab.com/Sudarshan_K/panorama/raw/master/secrets.yaml) contains the ip address of the panorama, the login credientials and the source file name.   
 
-### Input file [configuration.xlsx](https://gitlab.com/Sudarshan_K/panorama/blob/master/variables/configuration.xlsx)
+### Source file [sample-sourcefile.xlsx] ()
 Below are formats to follow when populating the input file.
 1. Filename, Sheetnames and column names **can not** change.
 2. FirewallPolicies - Defines the security policies that are to be configured.
-2. NetworkObjects - Defined the Network Objects. Refer to the [metadata] file for details.
+2. NetworkObjects - Defined the Network Objects.
 3. NetworkGroup Sheet - Defines the Network Objects. Objects can be a list or a single value but needs to be in single quotes (') eg:- 'member1','member2' or 'member1'
+4. Services - Defines the Service Objects that need to be configured
+5. ServiceGroups - Defines the Service Group Objects that need to be configured
 
+# Playbooks
 
-# Executing the playbook
-
-The playbook can be executed by executing the below command in a terminal.
+### panos-check.yaml
+Checks the connection of the script server to Panorama instance, executed by command
 ```
-ansible-playbook /path/to/file/configure.yaml
+ansible-playbook /path/to/file/panos-check.yaml
 ```
+Execution logs are written to logs/networkaddresses-log.csv and logs/networkobjects-log.csv
 
-# Author
+### configure-network-objects.yaml
+Configures the Network objects and Network Group Objects, executed by command  
+```
+ansible-playbook /path/to/file/configure-network-objects.yaml
+```
+Execution logs are written to logs
 
+### configure-service-objects.yaml
+Configures the Service objects and Service Group Objects, executed by command  
+```
+ansible-playbook /path/to/file/configure-service-objects.yaml
+```
+Execution logs are written to logs
+
+### configure-security-policy.yaml
+Configured the security-policy.yaml, executed by command  
+```
+ansible-playbook /path/to/file/configure-security-policy.yaml
+```
+Execution logs are written to logs
+
+
+## Author
 Sudarshan Vijaya Kumar
 
 ---

@@ -106,4 +106,4 @@ options:
             - Device groups are used for the Panorama interaction with Firewall(s). The group must exists on Panorama.
             If device group is not define we assume that we are contacting Firewall.
         default: None
-'''
+...

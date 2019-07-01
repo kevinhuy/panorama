@@ -1,2 +1,14 @@
-Failed, Object 'group_1' already exists. Use operation: 'update' to change it.
-Failed, Object 'group_2' already exists. Use operation: 'update' to change it.
+Successful, Object 'grp_coles_intsmtp' successfully added
+Successful, Object 'goc_coles_intsmtp' successfully added
+Failed,  goc_coles_prod_mq -> static '[hoc_172.25.181.41_upmq1s'' is not a valid reference
+ goc_coles_prod_mq -> static is invalid
+Successful, Object 'goc_intranet_portal' successfully added
+Successful, Object 'goc_proxy-int_intfc' successfully added
+Successful, Object 'goc_sap_new' successfully added
+Failed, Object 'goc_sysmanage_servers' already exists. Use operation: 'update' to change it.
+Failed, value of operation must be one of: add, update, delete, find, got: 
+Failed, Object 'goc_coles_intsmtp' already exists. Use operation: 'update' to change it.
+Successful, Object 'goc_coles_prod_mq' successfully added
+Failed, Object 'goc_intranet_portal' already exists. Use operation: 'update' to change it.
+Failed, Object 'goc_proxy-int_intfc' already exists. Use operation: 'update' to change it.
+Failed, Object 'goc_sap_new' already exists. Use operation: 'update' to change it.
