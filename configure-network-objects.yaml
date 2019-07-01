@@ -1,44 +1,55 @@
+# This playbook configures Network Objects on panorama.
+# Looks for the source file for configuration details in the variables folder.
 ---
 - name: ansible-playbook to configure network objects to Panorama
   hosts: localhost
   gather_facts: false
   connection: local
 
+# Makes the modules in the ansible-galaxy role installed earlier to the playbook
   roles:
     - role: PaloAltoNetworks.paloaltonetworks
 
+  # Imports Secrets.yaml which contains the ip-address, username and password and the source file containing the configuration details.
   tasks:
   - name: Import file containing the login details and source file
     include_vars:
       file: secrets.yaml
 
+  # Imports the source source file and makes it avaliable to the playbook
   - name: Import Source file and convert to json
     xls_to_facts:
       src: variables/{{ source }}.xlsx
     register: configxls
 
+  # Populates the details in source file - NetworkAddresses sheet to yaml format
   - name: Populate Network Objects to be configured to yaml file
     template:
       src: templates/networkadd.j2
       dest: variables/networkaddress-variable.yaml
     tags: template, networkaddress
 
+  # Populates the details in source file - NetworkObjects sheet to yaml format
   - name: Populate Network Group Objects to be configured to yaml file
     template:
       src: templates/networkgroup.j2
       dest: variables/networkgroup-variable.yaml
     tags: template, networkgroup
 
+  # Imports the Network Objects Variables file that was populated earlier
   - name: Import Network Objects variables file
     include_vars:
       file: variables/networkaddress-variable.yaml
     tags: import, networkaddress
   
+  # Imports the Network Group Objects file that was populated earlier
   - name: Import Network Group Objects variables file
     include_vars:
       file: variables/networkgroup-variable.yaml
     tags: import, networkgroups
 
+  # Configures Network addresses only when the populated variables file is not empty and when the network
+  # address is not a range. It looks for a '-' in the Ipaddress filed to determine if it is a range.   
   - name: Configure network addresses
     include_tasks: tasks/Network-Objects/address.yaml
     when:
@@ -47,6 +58,8 @@
     with_items: "{{ networkadd }}"
     tags: configure, networkaddress
 
+  # Configures Network addresses only when the populated variables file is not empty and when the network
+  # address is a range. It looks for a '-' in the Ipaddress filed to determine if it is a range. 
   - name: Configure network ranges
     include_tasks: tasks/Network-Objects/address-range.yaml
     when:
@@ -54,7 +67,8 @@
     - item.addressgroupip.find('-') != -1
     with_items: "{{ networkadd }}"
     tags: configure, networkaddress
-
+  
+  # Configures Network group objects only when the populated list is not empty.
   - name: Configure network groups
     include_tasks: tasks/Network-Objects/groups.yaml
     when: networkgroup != none
