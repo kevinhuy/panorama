@@ -174,3 +174,67 @@ Failed, Object 'hoc_172.22.160.150_upsap3' already exists. Use operation: 'updat
 Successful, Object 'hoc_172.22.160.151_sh0601ec' successfully added
 Failed, Object 'hoc_172.22.160.152_upsap2' already exists. Use operation: 'update' to change it.
 Successful, Object 'hoc_172.22.160.153_upsap1' successfully added
+hoc_172.22.71.31_eds_test, Failed, MODULE FAILURE
+See stdout/stderr for the exact error
+hoc_172.22.71.31_eds_test, Successful, Object 'hoc_172.22.71.31_eds_test' successfully added
+hoc_172.22.71.31_eds_test, Failed, parameters are mutually exclusive: addressobject, addressgroup, serviceobject, servicegroup, tag_name
+hoc_172.22.150.128_dpx04db01, Failed, parameters are mutually exclusive: addressobject, addressgroup, serviceobject, servicegroup, tag_name
+hoc_172.22.150.129_dpx04db02, Failed, parameters are mutually exclusive: addressobject, addressgroup, serviceobject, servicegroup, tag_name
+hoc_172.22.150.130_dpx04db03, Failed, parameters are mutually exclusive: addressobject, addressgroup, serviceobject, servicegroup, tag_name
+hoc_172.22.150.131_dpx04db04, Failed, parameters are mutually exclusive: addressobject, addressgroup, serviceobject, servicegroup, tag_name
+hoc_172.22.71.31_eds_test, Failed, Object 'hoc_172.22.71.31_eds_test' already exists. Use operation: 'update' to change it.
+hoc_172.22.150.128_dpx04db01, Successful, Object 'hoc_172.22.150.128_dpx04db01' successfully added
+hoc_172.22.150.129_dpx04db02, Successful, Object 'hoc_172.22.150.129_dpx04db02' successfully added
+hoc_172.22.150.128_dpx04db01, Failed, Object 'hoc_172.22.150.128_dpx04db01' already exists. Use operation: 'update' to change it.
+hoc_172.22.150.129_dpx04db02, Failed, Object 'hoc_172.22.150.129_dpx04db02' already exists. Use operation: 'update' to change it.
+hoc_172.22.150.130_dpx04db03, Failed, Object 'hoc_172.22.150.130_dpx04db03' already exists. Use operation: 'update' to change it.
+hoc_172.22.150.131_dpx04db04, Successful, Object 'hoc_172.22.150.131_dpx04db04' successfully added
+hoc_172.22.150.160_ddx02db01, Successful, Object 'hoc_172.22.150.160_ddx02db01' successfully added
+hoc_172.22.150.161_ddx02db02, Successful, Object 'hoc_172.22.150.161_ddx02db02' successfully added
+hoc_172.22.150.131_dpx04db04, Failed, Object 'hoc_172.22.150.131_dpx04db04' already exists. Use operation: 'update' to change it.
+hoc_172.22.150.160_ddx02db01, Failed, Object 'hoc_172.22.150.160_ddx02db01' already exists. Use operation: 'update' to change it.
+hoc_172.22.150.161_ddx02db02, Failed, Object 'hoc_172.22.150.161_ddx02db02' already exists. Use operation: 'update' to change it.
+hoc_172.22.150.162_ddx02db03, Failed, Object 'hoc_172.22.150.162_ddx02db03' already exists. Use operation: 'update' to change it.
+hoc_172.22.150.163_ddx02db04, Successful, Object 'hoc_172.22.150.163_ddx02db04' successfully added
+hoc_172.22.150.20_dpx05db01, Successful, Object 'hoc_172.22.150.20_dpx05db01' successfully added
+hoc_172.22.150.21_dpx05db02, Successful, Object 'hoc_172.22.150.21_dpx05db02' successfully added
+hoc_172.22.150.163_ddx02db04, Failed, Object 'hoc_172.22.150.163_ddx02db04' already exists. Use operation: 'update' to change it.
+hoc_172.22.150.20_dpx05db01, Failed, Object 'hoc_172.22.150.20_dpx05db01' already exists. Use operation: 'update' to change it.
+hoc_172.22.150.21_dpx05db02, Failed, Object 'hoc_172.22.150.21_dpx05db02' already exists. Use operation: 'update' to change it.
+hoc_172.22.150.22_dpx05db03, Successful, Object 'hoc_172.22.150.22_dpx05db03' successfully added
+hoc_172.22.150.23_dpx05db04, Successful, Object 'hoc_172.22.150.23_dpx05db04' successfully added
+hoc_172.22.160.100_dpx0401-vip, Successful, Object 'hoc_172.22.160.100_dpx0401-vip' successfully added
+hoc_172.22.160.101_dpx0402-vip, Successful, Object 'hoc_172.22.160.101_dpx0402-vip' successfully added
+hoc_172.22.160.102_dpx0403-vip, Successful, Object 'hoc_172.22.160.102_dpx0403-vip' successfully added
+hoc_172.22.160.103_dpx0404-vip, Successful, Object 'hoc_172.22.160.103_dpx0404-vip' successfully added
+hoc_172.22.160.200_ddx0201-vip, Failed, URLError: reason: [Errno 50] Network is down
+hoc_172.22.160.201_ddx0202-vip, Successful, Object 'hoc_172.22.160.201_ddx0202-vip' successfully added
+hoc_172.22.160.202_ddx0203-vip, Successful, Object 'hoc_172.22.160.202_ddx0203-vip' successfully added
+hoc_172.22.160.203_ddx0204-vip, Successful, Object 'hoc_172.22.160.203_ddx0204-vip' successfully added
+hoc_172.22.160.204_ddx02-scan, Successful, Object 'hoc_172.22.160.204_ddx02-scan' successfully added
+hoc_172.22.160.205_ddx02-scan, Successful, Object 'hoc_172.22.160.205_ddx02-scan' successfully added
+hoc_172.22.160.206_ddx02-scan, Successful, Object 'hoc_172.22.160.206_ddx02-scan' successfully added
+hoc_172.22.160.46_udixos1, Successful, Object 'hoc_172.22.160.46_udixos1' successfully added
+hoc_172.22.160.47_utsap1, Successful, Object 'hoc_172.22.160.47_utsap1' successfully added
+hoc_172.22.160.49_sh0301ec, Successful, Object 'hoc_172.22.160.49_sh0301ec' successfully added
+hoc_172.22.160.94_lpunixweb03, Successful, Object 'hoc_172.22.160.94_lpunixweb03' successfully added
+hoc_172.22.161.23_lx-papcops, Successful, Object 'hoc_172.22.161.23_lx-papcops' successfully added
+hoc_172.22.162.61_APCDCO, Successful, Object 'hoc_172.22.162.61_APCDCO' successfully added
+hoc_172.22.29.123_WPEPS02VM, Successful, Object 'hoc_172.22.29.123_WPEPS02VM' successfully added
+hoc_172.22.4.71_ZSTLLTCM601, Successful, Object 'hoc_172.22.4.71_ZSTLLTCM601' successfully added
+hoc_172.22.43.34_uprsprt02, Successful, Object 'hoc_172.22.43.34_uprsprt02' successfully added
+hoc_172.22.71.48_wpsapepprd02, Successful, Object 'hoc_172.22.71.48_wpsapepprd02' successfully added
+hoc_172.22.71.69_wpsapepuat02, Successful, Object 'hoc_172.22.71.69_wpsapepuat02' successfully added
+hoc_172.25.159.73_lpitmrtems4, Successful, Object 'hoc_172.25.159.73_lpitmrtems4' successfully added
+hoc_172.25.159.74_lpitmrtems1, Successful, Object 'hoc_172.25.159.74_lpitmrtems1' successfully added
+hoc_172.25.159.79_lpitmrtems6, Successful, Object 'hoc_172.25.159.79_lpitmrtems6' successfully added
+hoc_172.25.163.224_lpitmrtems5, Successful, Object 'hoc_172.25.163.224_lpitmrtems5' successfully added
+hoc_172.25.182.24_connecttest, Successful, Object 'hoc_172.25.182.24_connecttest' successfully added
+hoc_172.25.182.38_connectuat, Successful, Object 'hoc_172.25.182.38_connectuat' successfully added
+hoc_172.25.182.39_connectuat2, Successful, Object 'hoc_172.25.182.39_connectuat2' successfully added
+hoc_172.25.184.159_coleswebmail, Successful, Object 'hoc_172.25.184.159_coleswebmail' successfully added
+hoc_172.25.191.139_wpsapepdev01, Successful, Object 'hoc_172.25.191.139_wpsapepdev01' successfully added
+hoc_172.25.191.140_wpsapepuat01, Successful, Object 'hoc_172.25.191.140_wpsapepuat01' successfully added
+hoc_172.25.191.152_wpclsql11e, Successful, Object 'hoc_172.25.191.152_wpclsql11e' successfully added
+hoc_172.25.31.206_Uqsap3, Successful, Object 'hoc_172.25.31.206_Uqsap3' successfully added
+hoc_172.25.41.73_wpdms02, Successful, Object 'hoc_172.25.41.73_wpdms02' successfully added

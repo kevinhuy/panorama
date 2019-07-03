@@ -12,3 +12,6 @@ Successful, Object 'goc_coles_prod_mq' successfully added
 Failed, Object 'goc_intranet_portal' already exists. Use operation: 'update' to change it.
 Failed, Object 'goc_proxy-int_intfc' already exists. Use operation: 'update' to change it.
 Failed, Object 'goc_sap_new' already exists. Use operation: 'update' to change it.
+Failed,  goc_coles_intsmtp -> static 'hoc_172.22.160.220_lpsmtpgw1' is not a valid reference
+Failed,  goc_coles_prod_mq -> static 'hoc_172.25.61.92_hrs1502' is not a valid reference
+Failed,  goc_proxy-int_intfc -> static 'hoc_192.168.90.85_zitrndpsgd01-VIP' is not a valid reference

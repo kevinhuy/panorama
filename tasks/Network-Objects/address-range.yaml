@@ -12,6 +12,20 @@
   ignore_errors: true
   register: result
 
+- name: add Tag if object was created
+  panos_type_cmd:
+    ip_address: "{{ ip_address }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
+    xpath: |
+      /config/devices/entry[@name='localhost.localdomain']/device-group/
+      entry[@name='{{ item.devicegroup }}']/address/
+      entry[@name='{{ item.addressgroupname }}']/tag
+    element: |
+      <member>{{ item.tags }}</member>
+  when: result.failed == false
+  ignore_errors: true
+
 - name: Log the result when Failed
   lineinfile:
     path: logs/networkaddresses.csv
