@@ -7,13 +7,13 @@ networkgroup:
       operation: "add"
 
     - addressgroupname: "goc_coles_prod_mq" 
-      addressgroupip: "['hoc_172.25.181.41_upmq1s', 'hoc_172.25.181.42_upmq1', 'hoc_172.25.181.43_upmq2s', 'hoc_172.25.181.44_upmq2', 'hoc_172.25.61.92_hrs1502']"
+      addressgroupip: "['hoc_172.25.181.41_upmq1s', 'hoc_172.25.181.42_coles_mq', 'hoc_172.25.181.43_upmq2s', 'hoc_172.25.181.44_coles_mq', 'hoc_172.25.61.92_hrs1502']"
       devicegroup: "dg_au_dc_innerfw"
       description: ""
       operation: "add"
 
     - addressgroupname: "goc_intranet_portal" 
-      addressgroupip: "['hoc_172.25.184.226_portal_cmlconnect_org', 'hoc_172.25.184.228_portal_cmlconnect_org_test']"
+      addressgroupip: "['hoc_172.25.184.226_portal.cmlconnect.org', 'hoc_172.25.184.228_portal.cmlconnect.org']"
       devicegroup: "dg_au_dc_innerfw"
       description: ""
       operation: "add"
@@ -25,12 +25,6 @@ networkgroup:
       operation: "add"
 
     - addressgroupname: "goc_sap_new" 
-      addressgroupip: "['hoc_172.22.160.127_Uqsap3', 'hoc_172.22.160.142_udsap1', 'hoc_172.22.160.143_st0111aa', 'hoc_172.22.160.144_udsap2', 'hoc_172.22.160.145_st0601aa', 'hoc_172.22.160.146_uqsap1', 'hoc_172.22.160.147_uqsap2', 'hoc_172.22.160.148_uqsap3', 'hoc_172.22.160.150_upsap3', 'hoc_172.22.160.151_sh0601ec', 'hoc_172.22.160.152_upsap2', 'hoc_172.22.160.153_upsap1']"
-      devicegroup: "dg_au_dc_innerfw"
-      description: ""
-      operation: "add"
-
-    - addressgroupname: "goc_sysmanage_servers" 
       addressgroupip: "['hoc_172.22.160.127_Uqsap3', 'hoc_172.22.160.142_udsap1', 'hoc_172.22.160.143_st0111aa', 'hoc_172.22.160.144_udsap2', 'hoc_172.22.160.145_st0601aa', 'hoc_172.22.160.146_uqsap1', 'hoc_172.22.160.147_uqsap2', 'hoc_172.22.160.148_uqsap3', 'hoc_172.22.160.150_upsap3', 'hoc_172.22.160.151_sh0601ec', 'hoc_172.22.160.152_upsap2', 'hoc_172.22.160.153_upsap1']"
       devicegroup: "dg_au_dc_innerfw"
       description: ""

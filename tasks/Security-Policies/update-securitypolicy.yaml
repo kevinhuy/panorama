@@ -22,8 +22,6 @@
     action: "{{ item.action }}"
     group_profile: "{{ item.group_profile }}"
     disabled: "{{ item.disabled }}"
-    location: "{{ item.location }}"
-  # existing_rule: "{{ item.existing_rule }}"
     log_start: "{{ item.log_start }}"
     log_end: "{{ item.log_end }}"
     log_setting: "{{ item.log_setting }}"
