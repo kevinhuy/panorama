@@ -28,14 +28,14 @@
 
 - name: Log the result when Failed
   lineinfile:
-    path: logs/networkaddresses.csv
+    path: logs/networkaddresses-log.csv
     create: yes
-    line: "Failed, {{ result.msg }}"
+    line: "{{ item.addressgroupname}}, Failed, {{ result.msg }}"
   when: result.failed == true
 
 - name: Log the result when Successful
   lineinfile:
-    path: logs/networkaddresses.csv
+    path: logs/networkaddresses-log.csv
     create: yes
-    line: "Successful, {{ result.msg }}"
+    line: "{{ item.addressgroupname }}, Successful, {{ result.msg }}"
   when: result.failed == false

@@ -1,0 +1,11 @@
+Configure Network Objects
+===================================
+ansible-playbook configure-network-objects.yaml
+
+Configure Service Objects
+====================================
+ansible-playbook configure-service-objects.yaml
+
+Configure Serucrity Polciies
+=====================================
+ansible-playbook configure-security-policy.yaml

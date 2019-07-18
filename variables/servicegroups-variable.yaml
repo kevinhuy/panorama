@@ -1,2 +1,32 @@
 servicesgroups:
 
+    - name: group100
+      members: [tcp_300, tcp_307]
+      devicegroup: Test
+      description: Configured by Ansible
+      operation: add
+
+    - name: group200
+      members: [udp_314, tcp_321, tcp_328, tcp_335]
+      devicegroup: Test
+      description: Configured by Ansible
+      operation: add
+
+    - name: group300
+      members: [tcp_342, tcp_349, tcp_356]
+      devicegroup: Test
+      description: Configured by Ansible
+      operation: add
+
+    - name: group400
+      members: [tcp_363]
+      devicegroup: Test
+      description: Configured by Ansible
+      operation: add
+
+    - name: group500
+      members: [tcp_370]
+      devicegroup: Test
+      description: Configured by Ansible
+      operation: add
+

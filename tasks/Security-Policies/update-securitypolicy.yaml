@@ -33,7 +33,7 @@
   lineinfile:
     path: logs/securitypolicy.csv
     create: yes
-    line: "{{ item.name }}, Failed, {{ item.name }}, {{ result.msg }}"
+    line: "{{ item.name }}, Failed, {{ result.msg }}"
   when: 
   - result.failed == true
 
@@ -41,6 +41,6 @@
   lineinfile:
     path: logs/securitypolicy.csv
     create: yes
-    line: "{{ item.name }}, Successful, {{ item.name }}, {{ result.msg }}"
+    line: "{{ item.name }}, Successful, {{ result.msg }}"
   when: 
     - result.failed == false

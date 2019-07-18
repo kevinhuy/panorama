@@ -1,198 +1,198 @@
 services:
 
+    - name: tcp_300
+      protocol: tcp
+      port: 300
+      devicegroup: Test
+      description: Added by Ansible
+      operation: add
+
+    - name: tcp_307
+      protocol: tcp
+      port: 307
+      devicegroup: Test
+      description: Added by Ansible
+      operation: add
+
+    - name: udp_314
+      protocol: udp
+      port: 314
+      devicegroup: Test
+      description: Added by Ansible
+      operation: add
+
+    - name: tcp_321
+      protocol: tcp
+      port: 321
+      devicegroup: Test
+      description: Added by Ansible
+      operation: add
+
+    - name: tcp_328
+      protocol: tcp
+      port: 328
+      devicegroup: Test
+      description: Added by Ansible
+      operation: add
+
+    - name: tcp_335
+      protocol: tcp
+      port: 335
+      devicegroup: Test
+      description: Added by Ansible
+      operation: add
+
+    - name: tcp_342
+      protocol: tcp
+      port: 342
+      devicegroup: Test
+      description: Added by Ansible
+      operation: add
+
+    - name: tcp_349
+      protocol: tcp
+      port: 349
+      devicegroup: Test
+      description: Added by Ansible
+      operation: add
+
+    - name: tcp_356
+      protocol: tcp
+      port: 356
+      devicegroup: Test
+      description: Added by Ansible
+      operation: add
+
+    - name: tcp_363
+      protocol: tcp
+      port: 363
+      devicegroup: Test
+      description: Added by Ansible
+      operation: add
+
+    - name: tcp_370
+      protocol: tcp
+      port: 370
+      devicegroup: Test
+      description: Added by Ansible
+      operation: add
+
+    - name: tcp_377
+      protocol: tcp
+      port: 377
+      devicegroup: Test
+      description: Added by Ansible
+      operation: add
+
+    - name: tcp_384
+      protocol: tcp
+      port: 384
+      devicegroup: Test
+      description: Added by Ansible
+      operation: add
+
+    - name: tcp_391
+      protocol: tcp
+      port: 391
+      devicegroup: Test
+      description: Added by Ansible
+      operation: add
+
+    - name: tcp_398
+      protocol: tcp
+      port: 398
+      devicegroup: Test
+      description: Added by Ansible
+      operation: add
+
+    - name: tcp_405
+      protocol: tcp
+      port: 405
+      devicegroup: Test
+      description: Added by Ansible
+      operation: add
+
+    - name: tcp_412
+      protocol: tcp
+      port: 412
+      devicegroup: Test
+      description: Added by Ansible
+      operation: add
+
     - name: tcp_123
       protocol: tcp
       port: 123
-      devicegroup: dg_au_dc_innerfw
-      description: 
+      devicegroup: Test
+      description: Added by Ansible
       operation: add
 
-    - name: tcp_24158
+    - name: tcp_426
       protocol: tcp
-      port: 24158
-      devicegroup: dg_au_dc_innerfw
-      description: 
+      port: 426
+      devicegroup: Test
+      description: Added by Ansible
       operation: add
 
-    - name: udp_137
-      protocol: udp
-      port: 137
-      devicegroup: dg_au_dc_innerfw
+    - name: 
+      protocol: none
+      port: 
+      devicegroup: 
       description: 
-      operation: add
+      operation: 
 
-    - name: tcp_2953
-      protocol: tcp
-      port: 2953
-      devicegroup: dg_au_dc_innerfw
+    - name: 
+      protocol: none
+      port: 
+      devicegroup: 
       description: 
-      operation: add
+      operation: 
 
-    - name: tcp_2954
-      protocol: tcp
-      port: 2954
-      devicegroup: dg_au_dc_innerfw
+    - name: 
+      protocol: none
+      port: 
+      devicegroup: 
       description: 
-      operation: add
+      operation: 
 
-    - name: tcp_3443
-      protocol: tcp
-      port: 3443
-      devicegroup: dg_au_dc_innerfw
+    - name: 
+      protocol: none
+      port: 
+      devicegroup: 
       description: 
-      operation: add
+      operation: 
 
-    - name: tcp_7510
-      protocol: tcp
-      port: 7510
-      devicegroup: dg_au_dc_innerfw
+    - name: 
+      protocol: none
+      port: 
+      devicegroup: 
       description: 
-      operation: add
+      operation: 
 
-    - name: tcp_3241
-      protocol: tcp
-      port: 3241
-      devicegroup: dg_au_dc_innerfw
+    - name: 
+      protocol: none
+      port: 
+      devicegroup: 
       description: 
-      operation: add
+      operation: 
 
-    - name: tcp_3243
-      protocol: tcp
-      port: 3243
-      devicegroup: dg_au_dc_innerfw
+    - name: 
+      protocol: none
+      port: 
+      devicegroup: 
       description: 
-      operation: add
+      operation: 
 
-    - name: tcp_3641
-      protocol: tcp
-      port: 3641
-      devicegroup: dg_au_dc_innerfw
+    - name: 
+      protocol: none
+      port: 
+      devicegroup: 
       description: 
-      operation: add
+      operation: 
 
-    - name: tcp_3643
-      protocol: tcp
-      port: 3643
-      devicegroup: dg_au_dc_innerfw
+    - name: 
+      protocol: none
+      port: 
+      devicegroup: 
       description: 
-      operation: add
-
-    - name: tcp_3612
-      protocol: tcp
-      port: 3612
-      devicegroup: dg_au_dc_innerfw
-      description: 
-      operation: add
-
-    - name: tcp_3201
-      protocol: tcp
-      port: 3201
-      devicegroup: dg_au_dc_innerfw
-      description: 
-      operation: add
-
-    - name: tcp_3202
-      protocol: tcp
-      port: 3202
-      devicegroup: dg_au_dc_innerfw
-      description: 
-      operation: add
-
-    - name: tcp_3203
-      protocol: tcp
-      port: 3203
-      devicegroup: dg_au_dc_innerfw
-      description: 
-      operation: add
-
-    - name: tcp_3211
-      protocol: tcp
-      port: 3211
-      devicegroup: dg_au_dc_innerfw
-      description: 
-      operation: add
-
-    - name: tcp_3601
-      protocol: tcp
-      port: 3601
-      devicegroup: dg_au_dc_innerfw
-      description: 
-      operation: add
-
-    - name: tcp_3603
-      protocol: tcp
-      port: 3603
-      devicegroup: dg_au_dc_innerfw
-      description: 
-      operation: add
-
-    - name: tcp_3622
-      protocol: tcp
-      port: 3622
-      devicegroup: dg_au_dc_innerfw
-      description: 
-      operation: add
-
-    - name: tcp_20443
-      protocol: tcp
-      port: 20443
-      devicegroup: dg_au_dc_innerfw
-      description: 
-      operation: add
-
-    - name: tcp_3600
-      protocol: tcp
-      port: 3600
-      devicegroup: dg_au_dc_innerfw
-      description: 
-      operation: add
-
-    - name: tcp_4700
-      protocol: tcp
-      port: 4700
-      devicegroup: dg_au_dc_innerfw
-      description: 
-      operation: add
-
-    - name: tcp_4800
-      protocol: tcp
-      port: 4800
-      devicegroup: dg_au_dc_innerfw
-      description: 
-      operation: add
-
-    - name: tcp_51001
-      protocol: tcp
-      port: 51001
-      devicegroup: dg_au_dc_innerfw
-      description: 
-      operation: add
-
-    - name: tcp_8446
-      protocol: tcp
-      port: 8446
-      devicegroup: dg_au_dc_innerfw
-      description: 
-      operation: add
-
-    - name: tcp_2444
-      protocol: tcp
-      port: 2444
-      devicegroup: dg_au_dc_innerfw
-      description: 
-      operation: add
-
-    - name: tcp_1984
-      protocol: tcp
-      port: 1984
-      devicegroup: dg_au_dc_innerfw
-      description: 
-      operation: add
-
-    - name: tcp_4457-4462
-      protocol: tcp
-      port: 4457-4462
-      devicegroup: dg_au_dc_innerfw
-      description: 
-      operation: add
+      operation: 
 
